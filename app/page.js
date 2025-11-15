@@ -10,7 +10,7 @@ export default function Home() {
           <Header />
         </section>
         <section className="w-full">
-            <HeroSection />
+         <HeroSection />
         </section>
         <section>
           <Footer />
