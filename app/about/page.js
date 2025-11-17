@@ -16,12 +16,12 @@ const page = () => {
         </section>
         {/* Hero section */}
         <div 
-            className="min-h-[350px] flex flex-col items-center justify-center text-center px-4 bg-gray-200 max-w-4xl rounded-2xl mx-auto mt-32 mb-10"
+            className={`min-h-[350px] flex flex-col items-center justify-center text-center px-4 bg-[url(../public/hero_about_img.png)] opacity-85 max-w-4xl rounded-2xl mx-auto mt-32 mb-10 `}
         >
-                <h1 className='text-primary text-5xl font-semibold py-5 '>
+                <h1 className='text-secondary text-5xl font-semibold py-5 '>
                     Your Favorite Flavors 🍛
                 </h1>
-                <p className=' text-gray-500 text-sm text-wrap max-w-2xl  '>
+                <p className=' text-secondary text-sm text-wrap max-w-2xl  '>
                     Rediscover your culinary journey with your hand-picked collection of delightful recipes.
                 </p>
         </div>
@@ -42,7 +42,8 @@ const page = () => {
                             src={item.image}
                             width={250} 
                             height={50} 
-                            alt="features_img"/>
+                            alt="features_img"
+                        />
                     </div>
                 ))}
 
@@ -61,9 +62,9 @@ const page = () => {
                 </p>
         </div>
 
-        {/* Teach Hunt */}
+        {/* Action Button */}
         <div 
-            className="min-h-[350px] flex flex-col items-center justify-center text-center px-4 bg-gray-200 max-w-4xl rounded-2xl mx-auto mt-32 mb-10"
+            className="min-h-[250px] flex flex-col items-center justify-center text-center px-4 bg-gray-200 max-w-4xl rounded-2xl mx-auto mt-32 mb-10"
         >
                 <h1 className=' text-5xl font-semibold py-10 '>
                     Ready to Start Cooking?

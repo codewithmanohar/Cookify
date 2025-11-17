@@ -2,24 +2,21 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import useIngredientsStore from "@/Store/useFoodStore";
-import { MagnetIcon, Mail, Search, SendHorizonal, Sparkles } from "lucide-react";
+import {  Search, Sparkles } from "lucide-react";
 import { INGREDIENTS } from "@/lib/data"
 import { Footer } from "@/components/Footer";
 import Link from "next/link"
-import { useState } from "react";
-
 
 
 export default function Counter() {
-  const { food_type } = useIngredientsStore();
+  const { food_ingridient, addIngredient, removeIngredient } = useIngredientsStore();
 
-  const [selected , setSelected] = useState([]);
-
+  
    const toggleOption = (item) => {
-    if (selected.includes(item)) {
-      setSelected(selected.filter((x) => x !== item));
-    } else {
-      setSelected([...selected, item]);
+    if(food_ingridient.includes(item)){
+      removeIngredient(item); 
+    }else{
+      addIngredient(item);
     }
   };
 
@@ -57,7 +54,7 @@ export default function Counter() {
                   {Ingredient.items.map((item, index) => (
                     <Button 
                       key={index} 
-                      variant={selected.includes(item.name) ? "destructive" : "outline"}
+                      variant={food_ingridient.includes(item.name) ? "destructive" : "outline"}
                       className="bg"
                       onClick={() => toggleOption(item.name)}
                       >{item.name} {item.icon}
@@ -91,40 +88,6 @@ export default function Counter() {
     </>
   );
 }
-
-// "use client";
-
-// import { useState } from "react";
-// import { Button } from "@/components/ui/button";
-
-// const options = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
-
-// export default function MultiSelectButtons() {
-//   const [selected, setSelected] = useState([]);
-
-//   const toggleOption = (item) => {
-//     if (selected.includes(item)) {
-//       setSelected(selected.filter((x) => x !== item));
-//     } else {
-//       setSelected([...selected, item]);
-//     }
-//   };
-
-//   return (
-//     <div className="flex flex-wrap gap-4">
-//       {options.map((item) => (
-//         <Button
-//           key={item}
-//           variant={selected.includes(item) ? "default" : "outline"}
-//           className="px-6 py-2"
-//           onClick={() => toggleOption(item)}
-//         >
-//           {item}
-//         </Button>
-//       ))}
-//     </div>
-//   );
-// }
 
 
 
