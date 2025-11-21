@@ -1,4 +1,5 @@
 // /Store/useIngredientsStore.js
+import axios from "axios";
 import { create } from "zustand";
 
 const useFoodStore = create((set) => ({
@@ -9,6 +10,10 @@ const useFoodStore = create((set) => ({
   recipe: null , 
   loading: false , 
   error: null ,
+
+  // Recipe states 
+  recipes : null , 
+  recipesLoading : false , 
 
   setFoodType: (newType) => set({ food_type: newType }),
 
@@ -27,7 +32,6 @@ const useFoodStore = create((set) => ({
     // Generate Recipe (API Request)
     getRecipe: async () => {
         set({loading: true , error: null}); 
-
         try {
           const res = await fetch("http://localhost:3000/api/generate" , {
             method: "POST", 
@@ -60,6 +64,23 @@ const useFoodStore = create((set) => ({
 
     // Clear generated recipe 
     clearRecipe: () => set({recipe: null}),
+
+    getAllRecipes: async () => {
+      try {
+        set({recipesLoading : true});
+        const res = await axios.get("http://localhost:3000/api/recipes"); 
+        console.log("recipes_data: ",res.data.recipes);
+        set({
+          recipes : res.data.recipes,
+          recipesLoading : false , 
+        });
+      } catch (error) {
+        set({recipesLoading : false});
+        console.log("Error fetching all reciepe store :" , error.message); 
+        return null
+      }
+      
+    }
     
 }));
 
