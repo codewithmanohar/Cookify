@@ -20,27 +20,7 @@ const page = () => {
     getRecipe();
   }, []);
 
-  // return (
-  //   <div>
-  //     <button
-  //       onClick={getRecipe}
-  //       disabled={loading}
-  //       className="px-4 py-2 bg-green-600 text-white rounded"
-  //     >
-  //       {loading ? "Generating..." : "Generate Recipe"}
-  //     </button>
 
-  //     {recipe && (
-  //       <pre className="mt-4 bg-gray-100 p-3 text-sm rounded">
-
-  //         <span>{recipe.recipe_img}</span>
-  //         {/* <span>{recipe.recipe_data.COOKING_INSTRUCTIONS}</span> */}
-  //         {/* <span>{recipe.recipe_data.RECIPE_INGREDIENTS}</span> */}
-
-  //       </pre>
-  //     )}
-  //   </div>
-  // )
 
   if (loading) {
     return <span>loading data...</span>

@@ -15,6 +15,9 @@ const useFoodStore = create((set) => ({
   recipes : null , 
   recipesLoading : false , 
 
+  // Recipe by Id 
+  recipeById : null , 
+
   setFoodType: (newType) => set({ food_type: newType }),
 
   // Add food ingredient
@@ -80,8 +83,23 @@ const useFoodStore = create((set) => ({
         return null
       }
       
-    }
+    },
     
+    getRecipeById: async (id) => {
+      try {
+        set({recipesLoading : true });
+        const res = await axios.get(`http://localhost:3000/api/recipes/${id}`)
+        console.log('DATA :' , res.data);
+        set({
+          recipeById: res.data,
+          recipesLoading: false
+        })
+      } catch (error) {
+        set({recipesLoading : false});
+        console.log("Error in fetching recipeById");
+        return Response.json(error.message);
+      }
+    }
 }));
 
 export default useFoodStore;
