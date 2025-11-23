@@ -1,6 +1,6 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation'; 
+import { useParams, useRouter } from 'next/navigation';
 import useFoodStore from '@/Store/useFoodStore';
 import { useEffect } from 'react';
 import { ChefHat, ShoppingCart, Trash } from 'lucide-react';
@@ -8,73 +8,58 @@ import { Button } from '@/components/ui/button';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
-// Removed incorrect/redundant imports: 
-// import { navigate } from 'next/dist/client/components/segment-cache-impl/navigation';
-// import { useRouter } from 'next/router'; // Using useRouter from 'next/navigation' above
+import { DeleteDialog } from '@/components/delete-dialog';
+
 
 export default function PostPage() {
   // Get the route parameters
   const params = useParams();
   const postId = params.id;
-  
+
   // Use the App Router's useRouter hook from 'next/navigation'
-  const router = useRouter(); 
-  
-  const { recipesLoading, getRecipeById, recipeById, removeRecipe } = useFoodStore(); 
+  const router = useRouter();
+
+  const { recipesLoading, getRecipeById, recipeById } = useFoodStore();
 
   // Fetch recipe data on mount
   useEffect(() => {
     // Added dependencies for correctness to prevent stale closure issues
     getRecipeById(postId);
-  }, [postId, getRecipeById]); 
+  }, [postId, getRecipeById]);
 
-  const handleRemove = async () => {
-    // 1. Ensure removeRecipe is awaited since it likely performs an async operation (like database deletion)
-    const success = await removeRecipe(postId); 
 
-    if (success) {
-      // Replaced alert() with console.log (for notification, typically use a Toast library)
-      console.log("Recipe Deleted successfully");
-      
-      // Navigate the user back to the home page after successful deletion
-      router.push("/");
-    } else {
-      // Properly structure the else block to only log failure if 'success' is false
-      console.error("Recipe not deleted. An error occurred.");
-    }
-  }
 
   // Handle loading state
-  if(recipesLoading){
+  if (recipesLoading) {
     return (
-        <div className="flex items-center justify-center min-h-screen text-xl font-medium">
-            <span>Loading data...</span>
-        </div>
+      <div className="flex items-center justify-center min-h-screen text-xl font-medium">
+        <span>Loading data...</span>
+      </div>
     );
   }
-  
+
   // Handle case where recipe is not found after loading
   if (!recipeById) {
-      return (
-          <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
-              <h1 className="text-3xl font-bold text-red-600">Recipe Not Found</h1>
-              <p className="mt-2 text-gray-600">The recipe with ID "{postId}" could not be loaded or does not exist.</p>
-              <Button className="mt-6" onClick={() => router.push('/')}>
-                  Go to Recipes List
-              </Button>
-          </div>
-      );
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+        <h1 className="text-3xl font-bold text-red-600">Recipe Not Found</h1>
+        <p className="mt-2 text-gray-600">The recipe with ID "{postId}" could not be loaded or does not exist.</p>
+        <Button className="mt-6" onClick={() => router.push('/')}>
+          Go to Recipes List
+        </Button>
+      </div>
+    );
   }
 
   // Main render content
   return (
     <div>
       <section>
-        <Header/>
+        <Header />
       </section>
-      
+
       <div className='mx-auto container max-w-5xl my-14'>
-        
+
         <section className='text-center py-10 w-full flex items-center justify-center flex-col'>
           <h1 className='text-primary text-5xl font-semibold py-5 '>
             {recipeById.dish_name}
@@ -97,7 +82,7 @@ export default function PostPage() {
             </div>
           ) : (
             <div className="w-full h-64 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500">
-                No Image Available
+              No Image Available
             </div>
           )}
         </section>
@@ -106,7 +91,7 @@ export default function PostPage() {
           <h1 className='text-2xl py-5 font-bold flex gap-2 items-center'>
             Ingredients <ShoppingCart className='w-6 h-6' />
           </h1>
-          
+
           {/* Ensure RECIPE_INGREDIENTS exists before mapping */}
           {recipeById.RECIPE_INGREDIENTS && recipeById.RECIPE_INGREDIENTS.map((Ingredient, index) => (
             <div key={index} className='mb-6'>
@@ -139,9 +124,7 @@ export default function PostPage() {
         </section>
 
         <section className='flex gap-5 items-center justify-center my-10' >
-          <Button onClick={handleRemove} variant='destructive' className='px-6 py-3 shadow-md hover:shadow-lg transition-shadow'>
-            <Trash className='w-5 h-5 mr-2' /> Remove Recipe 
-          </Button>
+          <DeleteDialog id={postId} />
         </section>
 
         <section>

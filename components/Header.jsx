@@ -32,9 +32,9 @@ export const Header = () => {
           <div className="flex gap-5 items-center">
             <NavigationMenuItem>
               <Link
-                href="/favorite"
+                href="/recipes"
                 className="text-md ">
-                <span>Favorites</span>
+                <span>My Recipes</span>
               </Link>
             </NavigationMenuItem>
 

@@ -7,9 +7,13 @@ import Image from 'next/image'
 import useFoodStore from '@/Store/useFoodStore'
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
+import { Trash } from 'lucide-react'
+import { DeleteDialog } from '@/components/delete-dialog'
 
 const page = () => {
-    const { recipes, getAllRecipes, recipesLoading } = useFoodStore();
+    const { recipes, getAllRecipes, recipesLoading, removeRecipe } = useFoodStore();
+
 
     useEffect(() => {
         getAllRecipes();
@@ -19,6 +23,18 @@ const page = () => {
         return <span>loading data</span>
     }
 
+    // Handle case where recipe is not found after loading
+    if (!recipes) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+                <h1 className="text-3xl font-bold text-red-600">Recipe Not Found</h1>
+                <p className="mt-2 text-gray-600">The recipe could not be loaded or does not exist.</p>
+                <Button className="mt-6" onClick={() => router.push('/')}>
+                    Go to Recipes List
+                </Button>
+            </div>
+        );
+    }
     return (
         <div className='container mx-auto my-14'>
             <section>
@@ -28,7 +44,7 @@ const page = () => {
 
             <div className="min-h-[400px]  flex flex-col items-center justify-center text-center px-4">
                 <h1 className='text-primary text-5xl font-semibold py-5 '>
-                    Your Favorite Flavors 🍛
+                    Your Recipes Flavors 🍛
                 </h1>
                 <p className=' text-gray-500 text-sm text-wrap max-w-2xl  '>
                     Rediscover your culinary journey with your hand-picked collection of delightful recipes.
@@ -63,7 +79,8 @@ const page = () => {
                                         View Recipe
                                     </Link>
                                 </Button>
-                                <Button variant="default">Remove</Button>
+
+                                <DeleteDialog id={card._id} />
                             </div>
                         </div>
                     ))}
