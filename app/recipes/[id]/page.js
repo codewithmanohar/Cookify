@@ -9,6 +9,8 @@ import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { DeleteDialog } from '@/components/delete-dialog';
+import { imgs } from '@/lib/data';
+import Loading from '@/components/Loading';
 
 
 export default function PostPage() {
@@ -31,11 +33,7 @@ export default function PostPage() {
 
   // Handle loading state
   if (recipesLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen text-xl font-medium">
-        <span>Loading data...</span>
-      </div>
-    );
+    return <Loading />
   }
 
   // Handle case where recipe is not found after loading

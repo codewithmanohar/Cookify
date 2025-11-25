@@ -2,14 +2,13 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
-import { RECIPE_CARDS } from '@/lib/data'
 import Image from 'next/image'
 import useFoodStore from '@/Store/useFoodStore'
 import { useEffect } from 'react'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
-import { Trash } from 'lucide-react'
 import { DeleteDialog } from '@/components/delete-dialog'
+import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import Loading from '@/components/Loading'
 
 const page = () => {
     const { recipes, getAllRecipes, recipesLoading, removeRecipe } = useFoodStore();
@@ -20,7 +19,7 @@ const page = () => {
     }, []);
 
     if (recipesLoading) {
-        return <span>loading data</span>
+       return <Loading />
     }
 
     // Handle case where recipe is not found after loading
@@ -53,36 +52,32 @@ const page = () => {
 
             {/* Recipe Cards */}
             {recipes && (
-                <section className='flex items-center justify-center gap-14 py-10 max-w-5xl mx-auto flex-wrap'>
+                <section className='flex items-center justify-center gap-14 py-10 max-w-5xl mx-auto flex-wrap '>
                     {recipes.map((card, index) => (
-                        <div
-                            key={index}
-                            className='rounded-xl max-w-xs bg-gray-100 pb-5'
-                        >
-                            <Image
-                                src={card.recipe_img}
-                                width={320}
-                                height={100}
-                                alt='image' />
-
-                            <div className='text-wrap p-5'>
-                                <h2 className='font-bold'>{card.dish_name}</h2>
-                                {/* <h4 className='text-sm text-wrap'>{card.description}</h4> */}
+                        <Card key={index} className="max-w-xs rounded-xl overflow-hidden p-2">
+                            {/* Image Section */}
+                            <div className="w-full h-40 relative">
+                                <Image
+                                    src={card.recipe_img}
+                                    alt="image"
+                                    fill
+                                    className="object-cover rounded-xl"
+                                />
                             </div>
-                            <div className='gap-5 flex items-center px-5  '>
 
-                                <Button
-                                    variant="outline"
-                                    asChild
-                                >
-                                    <Link href={`/recipe/${card._id}`} >
-                                        View Recipe
-                                    </Link>
+                            <CardHeader className="p-5">
+                                <CardTitle className="text-lg font-bold">{card.dish_name}</CardTitle>
+                                {/* <p className="text-sm">{card.description}</p> */}
+                            </CardHeader>
+
+                            <CardFooter className="flex items-center gap-4 px-5 pb-5">
+                                <Button variant="outline" asChild>
+                                    <Link href={`/recipes/${card._id}`}>View Recipe</Link>
                                 </Button>
 
-                                <DeleteDialog id={card._id} />
-                            </div>
-                        </div>
+                                <DeleteDialog id={card._id}  />
+                            </CardFooter>
+                        </Card>
                     ))}
                 </section>
             )}

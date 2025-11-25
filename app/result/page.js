@@ -7,14 +7,13 @@ import { ChefHat, Heart, RotateCcw, ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
 import useFoodStore from "@/Store/useFoodStore"
 import { useEffect } from 'react'
+import Loading from '@/components/Loading'
 
 
 const page = () => {
-  const { getRecipe, loading, recipe, error } = useFoodStore();
+  const { getRecipe, loading, recipe } = useFoodStore();
 
 
-
-  console.log(recipe);
 
   useEffect(() => {
     getRecipe();
@@ -23,7 +22,7 @@ const page = () => {
 
 
   if (loading) {
-    return <span>loading data...</span>
+    return <Loading />
   }
 
   return (
