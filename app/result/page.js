@@ -90,7 +90,7 @@ const page = () => {
         </section>
 
         <section className='flex gap-5 items-center justify-center my-10' >
-          <Button variant='outline'><Heart /> Save Recipe</Button>
+          {/* <Button variant='outline'><Heart /> Save Recipe</Button> */}
           <Button variant='default'><RotateCcw /> Generate Variation</Button>
         </section>
 

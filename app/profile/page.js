@@ -1,3 +1,4 @@
+"use client"
 import { CustomToggle } from '@/components/customToggle'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -6,10 +7,13 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
 import { favoriteCuisines, PROFILE_INFO } from '@/lib/data'
 import { CookingPot } from 'lucide-react'
+import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
+    const {data: session} = useSession();
+    console.log(session?.user?.image);
     return (
         <>
             <section>
@@ -24,13 +28,13 @@ const page = () => {
                             alt='profile_img'
                             width={100}
                             height={100}
-                            src={PROFILE_INFO.profile_img}
+                            src={session?.user?.image || PROFILE_INFO.profile_img}
                             className='rounded-full'
                         />
 
                         <div className=' text-start'>
-                            <h2 className='text-2xl font-bold'>{PROFILE_INFO.name}</h2>
-                            <h4>{PROFILE_INFO.email}</h4>
+                            <h2 className='text-2xl font-bold'>{session?.user?.name}</h2>
+                            <h4>{session?.user?.email}</h4>
                         </div>
                     </div>
                     <Button variant="outline" >Edit Profile</Button>

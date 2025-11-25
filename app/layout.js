@@ -1,6 +1,6 @@
-import { Geist, Geist_Mono,  Space_Grotesk} from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
+import SessionProvider  from "@/components/SessionProvider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 const space_grotesk = Space_Grotesk({
-    weight: ["300", "400", "500", "600", "700"], // choose weights you need
-    subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // choose weights you need
+  subsets: ["latin"],
 });
 
 
@@ -26,11 +26,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${space_grotesk.className}  antialiased`}
-      >
-        {children}
-      </body>
+      <SessionProvider >
+        <body
+          className={`${space_grotesk.className}  antialiased`}
+        >
+          {children}
+        </body>
+      </SessionProvider>
+
     </html>
   );
 }
