@@ -36,9 +36,6 @@ const page = () => {
     }
     return (
         <div className='container mx-auto my-14'>
-            <section>
-                <Header />
-            </section>
             {/* Hero Section */}
 
             <div className="min-h-[400px]  flex flex-col items-center justify-center text-center px-4">

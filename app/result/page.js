@@ -27,9 +27,6 @@ const page = () => {
 
   return (
     <>
-      <section>
-        <Header />
-      </section>
       {recipe && <div className='mx-auto container max-w-5xl  my-14'>
         <section className='text-center py-10 w-full flex items-center justify-center flex-col'>
           <h1 className='text-primary text-5xl font-semibold py-5 '>

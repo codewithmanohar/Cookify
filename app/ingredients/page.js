@@ -26,10 +26,6 @@ export default function Counter() {
     <>
       <div className="container mx-auto my-14">
 
-        <section>
-          <Header />
-        </section>
-
         <div className=" mx-auto max-w-5xl">
           <h1 className="text-center py-10 text-4xl  font-semibold">What ingredients do you have?</h1>
           <form

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SessionProvider  from "@/components/SessionProvider"
+import { Header } from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <body
           className={`${space_grotesk.className}  antialiased`}
         >
+          <Header />
           {children}
         </body>
       </SessionProvider>
