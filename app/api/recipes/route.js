@@ -1,10 +1,10 @@
 import { connectDB } from "@/lib/mongoose";
 import Recipe from "@/models/Recipe";
 
-export async function GET() {
+export async function GET(req, context) {
   try {
     await connectDB();
-
+    
     const recipes = await Recipe.find().sort({ createdAt: -1 }); // newest first
 
     return Response.json({

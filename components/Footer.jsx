@@ -44,7 +44,7 @@ export const Footer = () => {
 
       </div>
 
-      <div className='pt-10'>
+      <div className='py-10 '>
         <h3 className='text-center text-sm text-gray-500'>© 2025 CookMateAI. All rights reserved.</h3>
       </div>
 

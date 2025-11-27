@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import User from "./User";
 
 const IngredientSectionSchema = new mongoose.Schema({
   section: String,
@@ -16,6 +17,11 @@ const RecipeSchema = new mongoose.Schema(
     RECIPE_INGREDIENTS: [IngredientSectionSchema],
     COOKING_INSTRUCTIONS: [InstructionSchema],
     recipe_img: String,
+    createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: User,
+      required: ture
+    }
   },
   { timestamps: true }
 );

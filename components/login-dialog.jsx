@@ -38,7 +38,7 @@ export function LoginDialog({ id }) {
             <DialogClose asChild>
               <Button variant="outline">Cancel</Button>
             </DialogClose>
-            <Button onClick={() => signIn("google")} className="bg-gray-800 hover:bg-gray-900" type="submit">
+            <Button onClick={() => signIn("google")} className="bg-green-500 hover:bg-green-600" type="submit">
               
               <span>Login with Google</span>
             </Button>
