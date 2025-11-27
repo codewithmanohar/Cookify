@@ -11,9 +11,6 @@ const page = () => {
   return (
     <>
      <div className="container mx-auto">
-        <section className="min-w-20">
-            <Header />
-        </section>
         {/* Hero section */}
         <div 
             className={`min-h-[350px] flex flex-col items-center justify-center text-center px-4 bg-[url(../public/hero_about_img.png)] opacity-85 max-w-4xl rounded-2xl mx-auto mt-32 mb-10 `}

@@ -52,9 +52,6 @@ export default function PostPage() {
   // Main render content
   return (
     <div>
-      <section>
-        <Header />
-      </section>
 
       <div className='mx-auto container max-w-5xl my-14'>
 
