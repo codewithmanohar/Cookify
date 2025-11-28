@@ -13,7 +13,8 @@ import React from 'react'
 
 const page = () => {
     const {data: session} = useSession();
-    console.log(session?.user?.image);
+    
+
     return (
         <>
             <div className="max-w-5xl mx-auto ">

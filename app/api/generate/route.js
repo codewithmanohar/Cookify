@@ -25,7 +25,7 @@ export async function POST(req) {
     await connectDB();
 
     const body = await req.json();
-    const { selectedIngredients, food_type } = body;
+    const { selectedIngredients, food_type, userId } = body;
 
     if (!selectedIngredients || !food_type) {
       return Response.json(
@@ -33,6 +33,13 @@ export async function POST(req) {
         { status: 400 }
       );
     }
+    if (!userId) {
+      return Response.json(
+        { message: "userId is required" },
+        { status: 400 }
+      );
+    }
+    
 
     // 1. Generate recipe text (using Gemini)
     const recipe_data = await generateRecipe(food_type, selectedIngredients);
@@ -46,6 +53,7 @@ export async function POST(req) {
       RECIPE_INGREDIENTS: recipe_data.RECIPE_INGREDIENTS,
       COOKING_INSTRUCTIONS: recipe_data.COOKING_INSTRUCTIONS,
       recipe_img: recipe_img,
+      createdBy: userId,
     });
 
     // Return API Response

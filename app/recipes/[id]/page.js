@@ -3,13 +3,13 @@
 import { useParams, useRouter } from 'next/navigation';
 import useFoodStore from '@/Store/useFoodStore';
 import { useEffect } from 'react';
-import { ChefHat, ShoppingCart, Trash } from 'lucide-react';
+import { ChefHat, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
-import { Header } from '@/components/Header';
+// import { Header } from '@/components/Header';
+// import { imgs } from '@/lib/data';
 import { DeleteDialog } from '@/components/delete-dialog';
-import { imgs } from '@/lib/data';
 import Loading from '@/components/Loading';
 
 
@@ -40,7 +40,7 @@ export default function PostPage() {
   if (!recipeById) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
-        <h1 className="text-3xl font-bold text-red-600">Recipe Not Found</h1>
+        {/* <h1 className="text-3xl font-bold text-red-600">Recipe Not Found</h1> */}
         <p className="mt-2 text-gray-600">The recipe with ID "{postId}" could not be loaded or does not exist.</p>
         <Button className="mt-6" onClick={() => router.push('/')}>
           Go to Recipes List

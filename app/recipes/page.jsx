@@ -9,13 +9,16 @@ import Link from 'next/link'
 import { DeleteDialog } from '@/components/delete-dialog'
 import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import Loading from '@/components/Loading'
+import { useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 
 const page = () => {
     const { recipes, getAllRecipes, recipesLoading, removeRecipe } = useFoodStore();
-
+    const router = useRouter();
+    const {data: session } = useSession();
 
     useEffect(() => {
-        getAllRecipes();
+        getAllRecipes(session?.user?.id);
     }, []);
 
     if (recipesLoading) {
@@ -64,7 +67,6 @@ const page = () => {
 
                             <CardHeader className="p-5">
                                 <CardTitle className="text-lg font-bold">{card.dish_name}</CardTitle>
-                                {/* <p className="text-sm">{card.description}</p> */}
                             </CardHeader>
 
                             <CardFooter className="flex items-center gap-4 px-5 pb-5">

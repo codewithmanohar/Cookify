@@ -8,15 +8,16 @@ import Image from 'next/image'
 import useFoodStore from "@/Store/useFoodStore"
 import { useEffect } from 'react'
 import Loading from '@/components/Loading'
+import { useSession } from 'next-auth/react'
 
 
 const page = () => {
   const { getRecipe, loading, recipe } = useFoodStore();
-
+  const {data: session } = useSession();
 
 
   useEffect(() => {
-    getRecipe();
+    getRecipe(session?.user?.id);
   }, []);
 
 

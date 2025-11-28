@@ -4,8 +4,8 @@ import Recipe from "@/models/Recipe";
 export async function GET(req, context) {
   try {
     await connectDB();
-    
-    const recipes = await Recipe.find().sort({ createdAt: -1 }); // newest first
+    const {id} = await context.params; 
+    const recipes = await Recipe.find({createdBy : id}).sort({ createdAt: -1 }); // newest first
 
     return Response.json({
       success: true,

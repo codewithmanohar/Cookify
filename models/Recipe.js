@@ -19,8 +19,8 @@ const RecipeSchema = new mongoose.Schema(
     recipe_img: String,
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: User,
-      required: ture
+      ref: "User",
+      required: true
     }
   },
   { timestamps: true }

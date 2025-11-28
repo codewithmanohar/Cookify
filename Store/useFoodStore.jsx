@@ -1,7 +1,6 @@
 // /Store/useIngredientsStore.js
 import { api } from "@/lib/axiosInstance";
 import axios from "axios";
-import { AsyncCallbackSet } from "next/dist/server/lib/async-callback-set";
 import { create } from "zustand";
 
 const useFoodStore = create((set) => ({
@@ -35,7 +34,7 @@ const useFoodStore = create((set) => ({
     })),
 
   // Generate Recipe (API Request)
-  getRecipe: async () => {
+  getRecipe: async (userId) => {
     set({ loading: true, error: null });
     try {
       const res = await fetch("http://localhost:3000/api/generate", {
@@ -46,6 +45,7 @@ const useFoodStore = create((set) => ({
         body: JSON.stringify({
           food_type: useFoodStore.getState().food_type,
           selectedIngredients: useFoodStore.getState().food_ingridient,
+          userId: userId
         }),
       });
 
@@ -70,11 +70,11 @@ const useFoodStore = create((set) => ({
   // Clear generated recipe 
   clearRecipe: () => set({ recipe: null }),
 
-  getAllRecipes: async () => {
+  getAllRecipes: async (id) => {
     try {
       set({ recipesLoading: true });
-      const res = await axios.get("http://localhost:3000/api/recipes");
-      console.log("recipes_data: ", res.data.recipes);
+      const res = await axios.get(`http://localhost:3000/api/recipes/user/${id}`);
+      
       set({
         recipes: res.data.recipes,
         recipesLoading: false,
