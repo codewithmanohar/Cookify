@@ -12,26 +12,25 @@ import {
 import useFoodStore from "@/Store/useFoodStore"
 import { Trash } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
+import { toast } from "react-toastify"
 
 export function DeleteDialog({ id }) {
   const { removeRecipe } = useFoodStore();
   const router = useRouter();
 
   const handleDelete = async () => {
-    // 1. Ensure removeRecipe is awaited since it likely performs an async operation (like database deletion)
-    
-    const success = await removeRecipe(id);
+    const promise = removeRecipe(id);
+    toast.promise(promise, {
+      pending: "Deleting your Recipe...",
+      success: "Recipe deleted successfully! 🎉",
+      error: "Something went wrong ❌"
+    });
 
-    if (success) {
-      // Replaced alert() with console.log (for notification, typically use a Toast library)
-      console.log("Recipe Deleted successfully");
-
-      // Navigate the user back to the home page after successful deletion
+    const success = await promise; 
+    if (success)
       router.push("/");
-    } else {
-      // Properly structure the else block to only log failure if 'success' is false
+    else
       console.error("Recipe not deleted. An error occurred.");
-    }
   }
   return (
     <Dialog>

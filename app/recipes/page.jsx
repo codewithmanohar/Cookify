@@ -1,6 +1,5 @@
 "use client"
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import useFoodStore from '@/Store/useFoodStore'
@@ -11,7 +10,8 @@ import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import Loading from '@/components/Loading'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
-import PaginationDemo  from '@/components/pagination'
+import PaginationDemo from '@/components/pagination'
+import { toast } from 'react-toastify'
 
 const page = () => {
     const { recipes, getAllRecipes, recipesLoading, totalPages, currentPage } = useFoodStore();
@@ -81,7 +81,11 @@ const page = () => {
                             </CardFooter>
                         </Card>
                     ))}
-                    <section>
+                    
+                </section>
+            )}
+
+            <section>
                         <PaginationDemo
                             currentPage={currentPage}
                             totalPages={totalPages}
@@ -89,8 +93,6 @@ const page = () => {
                         />
 
                     </section>
-                </section>
-            )}
 
 
             <section>
