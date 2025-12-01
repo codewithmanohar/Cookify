@@ -1,16 +1,25 @@
 "use client";
-import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import useIngredientsStore from "@/Store/useFoodStore";
 import { Search, Sparkles } from "lucide-react";
 import { INGREDIENTS } from "@/lib/data"
 import { Footer } from "@/components/Footer";
 import Link from "next/link"
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+
 
 
 export default function Counter() {
   const { food_type, food_ingridient, addIngredient, removeIngredient } = useIngredientsStore();
-
+  const router = useRouter();
+  useEffect(() => {
+    if(!food_type) {
+      toast.info("Please select the Food Type!");
+      router.push("/")
+    }
+  },[])
 
   const toggleOption = (item) => {
     if (food_ingridient.includes(item)) {

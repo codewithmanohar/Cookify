@@ -8,12 +8,13 @@ import useFoodStore from "@/Store/useFoodStore"
 import { useEffect } from 'react'
 import Loading from '@/components/Loading'
 import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 
 const page = () => {
   const { getRecipe, loading, recipe } = useFoodStore();
-  const {data: session } = useSession();
-
+  const { data: session } = useSession();
+  const router = useRouter();
 
   useEffect(() => {
     getRecipe(session?.user?.id);
@@ -33,9 +34,9 @@ const page = () => {
             {/* Classic Butter Chicken 🍛 */}
             {recipe.recipe_data.dish_name}
           </h1>
-          <p className=' text-gray-500 text-sm text-wrap max-w-2xl  '>
+          {/* <p className=' text-gray-500 text-sm text-wrap max-w-2xl  '>
             A rich, creamy, and mildly spiced Indian curry, perfect for a cozy dinner. Best served with naan bread or basmati rice.
-          </p>
+          </p> */}
         </section>
         <section className="my-6">
           {recipe.recipe_img ? (
@@ -88,13 +89,13 @@ const page = () => {
 
         <section className='flex gap-5 items-center justify-center my-10' >
           {/* <Button variant='outline'><Heart /> Save Recipe</Button> */}
-          <Button 
+          <Button
             variant='default'
-            onClick={() => getRecipe(session?.data?.id)}
-            >
-              <RotateCcw />
-               Generate Variation
-              </Button>
+            onClick={() => router.push("/")}
+          >
+            <RotateCcw />
+            Generate New Recipe
+          </Button>
         </section>
 
         <section>

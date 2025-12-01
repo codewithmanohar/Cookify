@@ -66,7 +66,7 @@ const page = () => {
                 <h1 className=' text-5xl font-semibold py-10 '>
                     Ready to Start Cooking?
                 </h1>
-                <Link href="/result" >
+                <Link href="/" >
                     <Button>Generate Your Next Recipe <Sparkles /></Button>
                 </Link>
         </div>
