@@ -23,26 +23,26 @@ export const HeroSection = () => {
         <div className="flex flex-col justify-center items-start w-full md:w-1/2 gap-8 text-center md:text-left">
           <CardHeader className="p-0 w-full">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-5">
-              <CardTitle className="text-3xl sm:text-4xl font-bold whitespace-nowrap">
+              <CardTitle className="text-xl sm:text-4xl font-bold whitespace-nowrap">
                 What can we cook today?
               </CardTitle>
             </div>
           </CardHeader>
 
           {/* BUTTONS */}
-          <CardContent className="flex flex-wrap justify-center md:justify-start gap-4 p-0">
+          <CardContent className="flex flex-wrap mx-auto flex-col sm:flex-row md:justify-start gap-4 p-0">
             <Link href="/ingredients" onClick={() => setFoodType("veg")}>
-              <Button className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base">
+              <Button className="w-52 sm:w-full bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base">
                 🥕 Vegetarian
               </Button>
             </Link>
             <Link href="/ingredients" onClick={() => setFoodType("vegan")}>
-              <Button className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base">
+              <Button className="w-52 sm:w-full bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base">
                 🥜 Vegan
               </Button>
             </Link>
             <Link href="/ingredients" onClick={() => setFoodType("non-veg")}>
-              <Button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base">
+              <Button className="w-52 sm:w-full bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base">
                 🥩 Non-Veg
               </Button>
             </Link>
