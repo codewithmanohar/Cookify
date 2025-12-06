@@ -23,7 +23,7 @@ export const  Header = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <ChefHatIcon className="text-primary" size={26} />
-          <span className="text-primary text-xl font-semibold tracking-wide">CookMateAI</span>
+          <span className="text-primary text-xl font-semibold tracking-wide">Cookify</span>
         </Link>
 
         {/* Desktop Menu */}

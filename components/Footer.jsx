@@ -17,10 +17,10 @@ export const Footer = () => {
         <div className="flex flex-col items-start">
           <div className="text-primary flex gap-2 items-center">
             <ChefHat />
-            <span className="text-xl font-semibold">CookMateAI</span>
+            <span className="text-xl font-semibold">Cookify</span>
           </div>
           <p className="text-xs text-gray-500 mt-2">
-            CookMateAI: Your culinary assistant for delightful recipes.
+            Cookify: Your culinary assistant for delightful recipes.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export const Footer = () => {
       {/* Bottom Text */}
       <div className="py-5 border-t">
         <h3 className="text-center text-xs text-gray-500">
-          © 2025 CookMateAI. All rights reserved.
+          © 2025 Cookify. All rights reserved.
         </h3>
       </div>
 

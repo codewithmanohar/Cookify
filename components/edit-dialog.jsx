@@ -27,12 +27,27 @@ export function EditDialog({ id }) {
 
     const handleEdit = async (e) => {
         e.preventDefault();
-        const data = {
-            name: userName,
-            profile_link: profileLink,
-        };
+        // const data = {
+        //     name: userName,
+        //     profile_link: profileLink,
+        // };
+        const data = {};
+
+        if (userName.trim() !== "") {
+            data.name = userName;
+        }
+
+        if (profileLink.trim() !== "") {
+            data.profile_link = profileLink;
+        }
+
+        // If user didn’t type anything
+        if (Object.keys(data).length === 0) {
+            toast.error("Please update at least one field.");
+            return;
+        }
         await editProfile(id, data);
-        router.refresh();
+        router.push("/");
     };
 
     return (
@@ -63,15 +78,7 @@ export function EditDialog({ id }) {
                             />
                         </div>
 
-                        <div className="grid gap-3">
-                            <Label htmlFor="profile-img">Profile Link</Label>
-                            <Input
-                                id="profile-img"
-                                value={profileLink}
-                                onChange={(e) => setProfileLink(e.target.value)}
-                                placeholder="https://yourlink.com"
-                            />
-                        </div>
+                        
                     </div>
 
                     <DialogFooter>
