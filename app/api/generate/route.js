@@ -43,9 +43,9 @@ export async function POST(req) {
 
     // 1. Generate recipe text (using Gemini)
     const recipe_data = await generateRecipe(food_type, selectedIngredients);
-    
+    console.log(recipe_data);
     // Generate recipe image
-    const recipe_img = await generateImageURL(recipe_data.dish_name);
+    const recipe_img = await generateImageURL(recipe_data?.dish_name);
 
     // 3. Save recipe in MongoDB
     const savedRecipe = await RecipeModel.create({

@@ -93,7 +93,7 @@ export default function Landing() {
 
         <div className="max-w-2xl text-center text-sm sm:text-base px-2">
           <p>
-            "CookMateAI transformed my weeknight dinners! I used to struggle with
+            "Cookify transformed my weeknight dinners! I used to struggle with
             meal ideas, but now I get delicious recipes instantly."
           </p>
         </div>

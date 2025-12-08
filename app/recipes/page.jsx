@@ -12,6 +12,7 @@ import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import PaginationDemo from '@/components/pagination'
 import { toast } from 'react-toastify'
+import DemoRecipes from '@/components/sample-recipes/DemoRecipes'
 
 const page = () => {
     const { recipes, getAllRecipes, recipesLoading, totalPages, currentPage } = useFoodStore();
@@ -25,19 +26,13 @@ const page = () => {
 
 
     if (recipesLoading) {
-        return <Loading message="Recipes loading..."/>
+        return <Loading message="Recipes loading..." />
     }
 
     // Handle case where recipe is not found after loading
     if (!recipes) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
-                <h1 className="text-3xl font-bold text-red-600">Recipe Not Found</h1>
-                <p className="mt-2 text-gray-600">The recipe could not be loaded or does not exist.</p>
-                <Button className="mt-6" onClick={() => router.push('/')}>
-                    Go to Recipes List
-                </Button>
-            </div>
+            <DemoRecipes />
         );
     }
     return (
@@ -56,7 +51,7 @@ const page = () => {
             {/* Recipe Cards */}
             {recipes && (
                 <section className='flex items-center justify-center gap-14 py-10 max-w-5xl mx-auto flex-wrap '>
-                    {recipes.map((card, index) => (
+                    {recipes?.map((card, index) => (
                         <Card key={index} className="max-w-xs rounded-xl overflow-hidden p-2">
                             {/* Image Section */}
                             <div className="w-full h-40 relative">
@@ -81,20 +76,18 @@ const page = () => {
                             </CardFooter>
                         </Card>
                     ))}
-                    
+
                 </section>
             )}
 
             <section>
-                        <PaginationDemo
-                            currentPage={currentPage}
-                            totalPages={totalPages}
-                            onPageChange={(p) => getAllRecipes(session?.user?.id, p)}
-                        />
+                <PaginationDemo
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={(p) => getAllRecipes(session?.user?.id, p)}
+                />
 
-                    </section>
-
-
+            </section>
             <section>
                 <Footer />
             </section>

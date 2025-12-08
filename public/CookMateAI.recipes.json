@@ -1,0 +1,1754 @@
+[{
+  "_id": {
+    "$oid": "6922922619f45f83bace5ebe"
+  },
+  "dish_name": "Savory Tomato and Herb Rice",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "1 cup long-grain white rice, rinsed",
+        "2 tablespoons olive oil",
+        "1 medium onion, finely chopped",
+        "3 cloves garlic, minced",
+        "1 large carrot, finely diced",
+        "3 ripe tomatoes, finely chopped",
+        "1 teaspoon dried oregano",
+        "1 teaspoon salt, or to taste",
+        "1/2 teaspoon black pepper, freshly ground",
+        "2 cups vegetable broth or water"
+      ],
+      "_id": {
+        "$oid": "6922922619f45f83bace5ebf"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Heat the olive oil in a medium saucepan or pot over medium heat. Add the chopped onion and diced carrot, and sauté for 5-7 minutes, until softened.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec0"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Add the minced garlic and cook for another minute until fragrant.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec1"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Stir in the finely chopped tomatoes, dried oregano, salt, and black pepper. Cook for 3-4 minutes, allowing the tomatoes to break down slightly.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec2"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Add the rinsed rice to the pot and stir for one minute to coat the grains with the tomato and vegetable mixture.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec3"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Pour in the vegetable broth or water and bring the mixture to a boil.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec4"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Once boiling, reduce the heat to low, cover the pot with a tight-fitting lid, and let it simmer for 15-20 minutes, or until all the liquid has been absorbed and the rice is cooked through.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec5"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Remove the pot from the heat and let it stand, covered, for 5-10 minutes. Do not lift the lid during this time.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec6"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Fluff the rice gently with a fork and serve warm.",
+      "_id": {
+        "$oid": "6922922619f45f83bace5ec7"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/5863612/pexels-photo-5863612.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-23T04:48:38.762Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "6922922719f45f83bace5ec9"
+  },
+  "dish_name": "Vegan Mediterranean Tomato Rice",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "1 cup long-grain white rice",
+        "2 tablespoons olive oil",
+        "1 medium onion, finely chopped",
+        "3 cloves garlic, minced",
+        "1 large carrot, finely diced",
+        "2 large tomatoes, diced",
+        "2 cups vegetable broth",
+        "1 teaspoon dried oregano",
+        "1/2 teaspoon salt, or to taste",
+        "1/4 teaspoon black pepper, or to taste"
+      ],
+      "_id": {
+        "$oid": "6922922719f45f83bace5eca"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Rinse the rice under cold water until the water runs clear. Set aside.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ecb"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Heat the olive oil in a medium pot or saucepan over medium heat. Add the chopped onion and diced carrot, and sauté for 5-7 minutes until softened and translucent.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ecc"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Add the minced garlic and cook for another minute until fragrant, stirring frequently to prevent burning.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ecd"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Stir in the rinsed rice and toast it for about 2 minutes, ensuring the grains are well-coated with the oil and aromatics.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ece"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Add the diced tomatoes, vegetable broth, dried oregano, salt, and black pepper to the pot. Stir well to combine.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ecf"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Bring the mixture to a boil. Once boiling, reduce the heat to low, cover the pot with a tight-fitting lid, and let it simmer for 15-20 minutes, or until all the liquid has been absorbed by the rice.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ed0"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Remove the pot from the heat and let it stand, covered, for 10 minutes. This allows the rice to steam and become fluffy.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ed1"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Uncover the pot, fluff the rice with a fork, and serve immediately. Adjust seasoning if necessary.",
+      "_id": {
+        "$oid": "6922922719f45f83bace5ed2"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/14969613/pexels-photo-14969613.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-23T04:48:39.062Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "69255dbb8a6139a8e4c449a5"
+  },
+  "dish_name": "Creamy Mushroom and Tomato Soup",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "1 tbsp Olive Oil",
+        "2 tbsp Butter",
+        "1 medium Onion, finely chopped",
+        "2 cloves Garlic, minced",
+        "1 medium Carrot, diced",
+        "250g Mushrooms, sliced",
+        "3 medium Tomatoes, roughly chopped",
+        "4 cups vegetable broth or water",
+        "1/2 cup Cream",
+        "Salt to taste",
+        "1/2 tsp Black Pepper, freshly ground"
+      ],
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449a6"
+      }
+    },
+    {
+      "section": "Garnish (Optional)",
+      "items": [
+        "A swirl of cream",
+        "Freshly ground black pepper"
+      ],
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449a7"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Heat the olive oil and butter in a large pot or Dutch oven over medium heat. Once the butter is melted, add the chopped onion, garlic, and carrot.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449a8"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Sauté the vegetables for 5-7 minutes, or until the onion is translucent and softened.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449a9"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Add the sliced mushrooms to the pot. Cook for about 8-10 minutes, stirring occasionally, until the mushrooms have released their liquid and started to brown.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449aa"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Stir in the chopped tomatoes, salt, and black pepper. Cook for another 5 minutes, allowing the tomatoes to break down.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449ab"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Pour in the vegetable broth or water. Bring the mixture to a boil, then reduce the heat to low, cover, and let it simmer for 15-20 minutes to allow the flavors to meld.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449ac"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Carefully transfer the soup to a blender, or use an immersion blender directly in the pot, and blend until smooth and creamy. If using a standard blender, you may need to do this in batches and be cautious with the hot liquid.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449ad"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Return the blended soup to the pot if necessary. Stir in the cream and heat gently over low heat. Do not let the soup boil after adding the cream.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449ae"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Taste and adjust the seasoning with more salt and pepper if needed. Serve hot, garnished with an extra swirl of cream and a pinch of black pepper.",
+      "_id": {
+        "$oid": "69255dbb8a6139a8e4c449af"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/24196190/pexels-photo-24196190.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-25T07:41:47.384Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "692572c79e41e32605671eec"
+  },
+  "dish_name": "Creamy Roasted Tomato and Vegetable Soup",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "4 large tomatoes, quartered",
+        "2 medium potatoes, peeled and cubed",
+        "2 medium carrots, chopped",
+        "1 large onion, roughly chopped",
+        "4 cloves garlic, whole",
+        "3 tablespoons olive oil",
+        "2 tablespoons butter",
+        "1 teaspoon sugar",
+        "4 cups water or vegetable broth",
+        "Salt to taste",
+        "Black pepper to taste"
+      ],
+      "_id": {
+        "$oid": "692572c79e41e32605671eed"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Preheat your oven to 400°F (200°C).",
+      "_id": {
+        "$oid": "692572c79e41e32605671eee"
+      }
+    },
+    {
+      "step": 2,
+      "text": "On a large baking sheet, combine the quartered tomatoes, cubed potatoes, chopped carrots, chopped onion, and whole garlic cloves. Drizzle with olive oil and season generously with salt and black pepper. Toss to coat everything evenly.",
+      "_id": {
+        "$oid": "692572c79e41e32605671eef"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Roast the vegetables in the preheated oven for 30-35 minutes, or until they are tender and slightly caramelized.",
+      "_id": {
+        "$oid": "692572c79e41e32605671ef0"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Carefully transfer the roasted vegetables from the baking sheet to a large pot or Dutch oven.",
+      "_id": {
+        "$oid": "692572c79e41e32605671ef1"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Add the water (or vegetable broth), butter, and sugar to the pot with the vegetables. Bring the mixture to a boil over medium-high heat.",
+      "_id": {
+        "$oid": "692572c79e41e32605671ef2"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Once boiling, reduce the heat to low, cover, and let the soup simmer for 15 minutes to allow the flavors to meld together.",
+      "_id": {
+        "$oid": "692572c79e41e32605671ef3"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Using an immersion blender, carefully blend the soup directly in the pot until it reaches a smooth and creamy consistency. Alternatively, you can blend it in batches in a countertop blender.",
+      "_id": {
+        "$oid": "692572c79e41e32605671ef4"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Taste the soup and adjust the seasoning with more salt, pepper, or sugar as needed. Serve hot.",
+      "_id": {
+        "$oid": "692572c79e41e32605671ef5"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/3493579/pexels-photo-3493579.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-25T09:11:35.223Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "692572c99e41e32605671ef7"
+  },
+  "dish_name": "Creamy Roasted Tomato and Vegetable Soup",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "4 medium tomatoes, halved",
+        "2 large potatoes, peeled and cubed",
+        "2 medium carrots, peeled and chopped",
+        "1 large onion, quartered",
+        "4 cloves garlic, peeled",
+        "2 tablespoons olive oil",
+        "1 tablespoon butter",
+        "1 teaspoon sugar",
+        "1 teaspoon salt, or to taste",
+        "1/2 teaspoon black pepper, freshly ground",
+        "4 cups water"
+      ],
+      "_id": {
+        "$oid": "692572c99e41e32605671ef8"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Preheat your oven to 400°F (200°C).",
+      "_id": {
+        "$oid": "692572c99e41e32605671ef9"
+      }
+    },
+    {
+      "step": 2,
+      "text": "On a large baking sheet, toss the halved tomatoes, cubed potatoes, chopped carrots, quartered onion, and whole garlic cloves with the olive oil, salt, and black pepper until everything is lightly coated.",
+      "_id": {
+        "$oid": "692572c99e41e32605671efa"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Arrange the vegetables in a single layer and roast for 30-35 minutes, or until they are tender and slightly caramelized.",
+      "_id": {
+        "$oid": "692572c99e41e32605671efb"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Carefully transfer the roasted vegetables to a large pot or Dutch oven. Add the 4 cups of water and the teaspoon of sugar. The sugar helps to balance the acidity of the tomatoes.",
+      "_id": {
+        "$oid": "692572c99e41e32605671efc"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Bring the mixture to a boil over medium-high heat, then reduce the heat to low, cover, and let it simmer for 15 minutes to allow the flavors to meld together.",
+      "_id": {
+        "$oid": "692572c99e41e32605671efd"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Remove the pot from the heat. Use an immersion blender to blend the soup directly in the pot until it's smooth and creamy. Alternatively, you can carefully transfer the soup in batches to a countertop blender and blend until smooth.",
+      "_id": {
+        "$oid": "692572c99e41e32605671efe"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Return the soup to the pot if you used a countertop blender. Stir in the tablespoon of butter until it has completely melted. This will add a final touch of richness.",
+      "_id": {
+        "$oid": "692572c99e41e32605671eff"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Taste the soup and adjust the seasoning with more salt and pepper if needed. Serve hot.",
+      "_id": {
+        "$oid": "692572c99e41e32605671f00"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/3493579/pexels-photo-3493579.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-25T09:11:37.030Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "6925749c9e41e32605672344"
+  },
+  "dish_name": "Butter-Glazed Roasted Potatoes and Tomatoes",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "2 large potatoes, cut into 1-inch cubes",
+        "2 medium tomatoes, quartered",
+        "1 large onion, thinly sliced"
+      ],
+      "_id": {
+        "$oid": "6925749c9e41e32605672345"
+      }
+    },
+    {
+      "section": "Fats and Seasonings",
+      "items": [
+        "2 tablespoons olive oil",
+        "1 tablespoon butter",
+        "1/2 teaspoon salt, or to taste",
+        "1/4 teaspoon freshly ground black pepper"
+      ],
+      "_id": {
+        "$oid": "6925749c9e41e32605672346"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Preheat your oven to 400°F (200°C). Prepare your vegetables by cubing the potatoes, quartering the tomatoes, and thinly slicing the onion.",
+      "_id": {
+        "$oid": "6925749c9e41e32605672347"
+      }
+    },
+    {
+      "step": 2,
+      "text": "In a large bowl, toss the cubed potatoes with 1 tablespoon of olive oil, salt, and black pepper. Spread them in a single layer on a baking sheet.",
+      "_id": {
+        "$oid": "6925749c9e41e32605672348"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Roast the potatoes for 20 minutes. While they are roasting, melt the butter in a skillet over medium-low heat.",
+      "_id": {
+        "$oid": "6925749c9e41e32605672349"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Add the sliced onions to the skillet and cook slowly, stirring occasionally, for 15-20 minutes until they are soft and caramelized.",
+      "_id": {
+        "$oid": "6925749c9e41e3260567234a"
+      }
+    },
+    {
+      "step": 5,
+      "text": "After the potatoes have roasted for 20 minutes, add the quartered tomatoes to the baking sheet. Drizzle with the remaining 1 tablespoon of olive oil and gently toss.",
+      "_id": {
+        "$oid": "6925749c9e41e3260567234b"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Return the baking sheet to the oven and roast for an additional 15-20 minutes, until the potatoes are golden and tender and the tomatoes are soft.",
+      "_id": {
+        "$oid": "6925749c9e41e3260567234c"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Transfer the roasted potatoes and tomatoes to a serving bowl. Top with the caramelized onions, toss gently to combine, and serve warm.",
+      "_id": {
+        "$oid": "6925749c9e41e3260567234d"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/6127324/pexels-photo-6127324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-25T09:19:24.755Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "692574a09e41e3260567234f"
+  },
+  "dish_name": "Simple Butter-Roasted Potatoes and Tomatoes",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "4 medium potatoes, washed and cut into 1-inch cubes",
+        "2 large tomatoes, chopped",
+        "1 large onion, thinly sliced",
+        "3 tablespoons unsalted butter, melted",
+        "2 tablespoons olive oil",
+        "1 teaspoon salt, or to taste",
+        "1/2 teaspoon freshly ground black pepper, or to taste"
+      ],
+      "_id": {
+        "$oid": "692574a09e41e32605672350"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Preheat your oven to 400°F (200°C).",
+      "_id": {
+        "$oid": "692574a09e41e32605672351"
+      }
+    },
+    {
+      "step": 2,
+      "text": "In a large bowl, combine the cubed potatoes, sliced onion, and chopped tomatoes.",
+      "_id": {
+        "$oid": "692574a09e41e32605672352"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Drizzle the olive oil over the vegetables. Season with salt and black pepper, then toss well to ensure everything is evenly coated.",
+      "_id": {
+        "$oid": "692574a09e41e32605672353"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Spread the vegetable mixture in a single, even layer on a large baking sheet.",
+      "_id": {
+        "$oid": "692574a09e41e32605672354"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Roast in the preheated oven for 20-25 minutes, until the potatoes begin to soften.",
+      "_id": {
+        "$oid": "692574a09e41e32605672355"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Remove the baking sheet from the oven and drizzle the melted butter over the vegetables. Gently toss to coat.",
+      "_id": {
+        "$oid": "692574a09e41e32605672356"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Return the baking sheet to the oven and roast for an additional 15-20 minutes, or until the potatoes are golden brown, crispy on the outside, and tender on the inside.",
+      "_id": {
+        "$oid": "692574a09e41e32605672357"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Remove from the oven, let cool slightly, and serve immediately.",
+      "_id": {
+        "$oid": "692574a09e41e32605672358"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/5192413/pexels-photo-5192413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-25T09:19:28.604Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "6925856e9e41e3260567303a"
+  },
+  "dish_name": "Creamy Tomato Soup with Savory Croutons",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "For the Soup",
+      "items": [
+        "2 tbsp Butter",
+        "1 large Onion, chopped",
+        "4 large Tomatoes, roughly chopped",
+        "1/2 cup Heavy Cream",
+        "1 tsp Salt, or to taste",
+        "1/2 tsp Black Pepper, freshly ground",
+        "1/4 tsp Red Chili Powder",
+        "1 tsp Soy Sauce",
+        "1 tsp Vinegar",
+        "2 cups water or vegetable broth"
+      ],
+      "_id": {
+        "$oid": "6925856e9e41e3260567303b"
+      }
+    },
+    {
+      "section": "For the Croutons",
+      "items": [
+        "2 slices of Bread, cut into cubes",
+        "2 tbsp Olive Oil",
+        "A pinch of Salt",
+        "A pinch of Black Pepper"
+      ],
+      "_id": {
+        "$oid": "6925856e9e41e3260567303c"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "First, prepare the croutons. In a bowl, toss the bread cubes with olive oil, a pinch of salt, and black pepper until evenly coated.",
+      "_id": {
+        "$oid": "6925856e9e41e3260567303d"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Heat a skillet over medium heat. Add the coated bread cubes and toast, turning occasionally, until golden brown and crispy on all sides. Set aside.",
+      "_id": {
+        "$oid": "6925856e9e41e3260567303e"
+      }
+    },
+    {
+      "step": 3,
+      "text": "For the soup, melt the butter in a large pot or Dutch oven over medium heat. Add the chopped onion and sauté until soft and translucent, about 5-7 minutes.",
+      "_id": {
+        "$oid": "6925856e9e41e3260567303f"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Add the chopped tomatoes, salt, black pepper, and red chili powder to the pot. Cook, stirring occasionally, until the tomatoes have broken down, about 10 minutes.",
+      "_id": {
+        "$oid": "6925856e9e41e32605673040"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Pour in the water or vegetable broth. Bring the mixture to a boil, then reduce the heat and let it simmer for 15 minutes.",
+      "_id": {
+        "$oid": "6925856e9e41e32605673041"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Carefully transfer the hot soup to a blender or use an immersion blender to blend until smooth. If using a regular blender, you may need to do this in batches.",
+      "_id": {
+        "$oid": "6925856e9e41e32605673042"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Return the blended soup to the pot. Stir in the heavy cream, soy sauce, and vinegar. Heat gently over low heat, but do not let it boil.",
+      "_id": {
+        "$oid": "6925856e9e41e32605673043"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Taste and adjust the seasoning if necessary. Serve the creamy tomato soup hot, garnished with the savory croutons.",
+      "_id": {
+        "$oid": "6925856e9e41e32605673044"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/20473714/pexels-photo-20473714.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-25T10:31:10.793Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "6927dfd976800d31b9243e2f"
+  },
+  "dish_name": "Classic Roasted Tomato and Garlic Soup",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "1 kg ripe tomatoes, halved",
+        "1 large onion, quartered",
+        "1 whole head of garlic",
+        "3 tablespoons olive oil",
+        "2 tablespoons butter",
+        "1 teaspoon salt, or to taste",
+        "1/2 teaspoon freshly ground black pepper, or to taste",
+        "2 cups vegetable broth (optional, for a thinner soup)"
+      ],
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e30"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Preheat your oven to 400°F (200°C). Slice the top off the head of garlic to expose the cloves.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e31"
+      }
+    },
+    {
+      "step": 2,
+      "text": "On a baking sheet, toss the halved tomatoes and quartered onion with 2 tablespoons of olive oil, salt, and pepper. Place the head of garlic on the sheet and drizzle it with the remaining 1 tablespoon of olive oil.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e32"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Roast for 30-35 minutes, or until the vegetables are tender and slightly caramelized at the edges.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e33"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Allow the vegetables to cool slightly. Squeeze the roasted garlic cloves out of their skins into a large pot or Dutch oven. Add the roasted tomatoes and onion.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e34"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Add the vegetable broth if using. Use an immersion blender to blend the mixture until smooth. Alternatively, transfer in batches to a regular blender and blend carefully, then return to the pot.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e35"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Place the pot over medium heat. Stir in the butter until it melts completely. Heat the soup until it's warmed through, but do not boil.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e36"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Taste and adjust seasoning with additional salt and pepper if needed. Serve hot.",
+      "_id": {
+        "$oid": "6927dfd976800d31b9243e37"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/30852890/pexels-photo-30852890.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdAt": {
+    "$date": "2025-11-27T05:21:29.179Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0,
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  }
+},
+{
+  "_id": {
+    "$oid": "6929a581f0d962d071fc4209"
+  },
+  "dish_name": "Creamy Tomato and Carrot Soup with Buttered Croutons",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "For the Soup",
+      "items": [
+        "4 large tomatoes, roughly chopped",
+        "2 medium carrots, peeled and chopped",
+        "1 medium onion, chopped",
+        "2 tbsp olive oil",
+        "1/2 cup heavy cream",
+        "4 cups vegetable broth or water",
+        "Salt to taste",
+        "Freshly ground black pepper to taste"
+      ],
+      "_id": {
+        "$oid": "6929a581f0d962d071fc420a"
+      }
+    },
+    {
+      "section": "For the Buttered Croutons",
+      "items": [
+        "2 slices of bread, cut into 1-inch cubes",
+        "2 tbsp butter"
+      ],
+      "_id": {
+        "$oid": "6929a581f0d962d071fc420b"
+      }
+    },
+    {
+      "section": "Optional Side Salad",
+      "items": [
+        "1 cucumber, sliced",
+        "A drizzle of olive oil",
+        "A pinch of salt and pepper"
+      ],
+      "_id": {
+        "$oid": "6929a581f0d962d071fc420c"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Heat the olive oil in a large pot or Dutch oven over medium heat. Add the chopped onion and cook until softened, about 5-7 minutes.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc420d"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Add the chopped carrots and cook for another 5 minutes, stirring occasionally.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc420e"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Stir in the chopped tomatoes, salt, and black pepper. Cook until the tomatoes start to break down, about 10 minutes.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc420f"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Pour in the vegetable broth or water. Bring the mixture to a boil, then reduce the heat to low, cover, and let it simmer for 20-25 minutes, or until the carrots are very tender.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc4210"
+      }
+    },
+    {
+      "step": 5,
+      "text": "While the soup is simmering, prepare the croutons. Melt the butter in a skillet over medium heat. Add the bread cubes and toast, turning frequently, until they are golden brown and crispy on all sides. Set aside.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc4211"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Once the vegetables in the soup are tender, remove the pot from the heat. Use an immersion blender to blend the soup until it is smooth and creamy. Alternatively, you can carefully transfer the soup in batches to a regular blender and blend until smooth.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc4212"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Return the blended soup to the pot over low heat. Stir in the heavy cream and warm through gently. Do not let it boil. Taste and adjust seasoning with more salt and pepper if needed.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc4213"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Ladle the hot soup into bowls and top with the homemade buttered croutons. For a simple side, toss the sliced cucumber with a little olive oil, salt, and pepper.",
+      "_id": {
+        "$oid": "6929a581f0d962d071fc4214"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/14774697/pexels-photo-14774697.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-11-28T13:37:05.548Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6929ad1bf0d962d071fc4355"
+  },
+  "dish_name": "Creamy Honey Butter Toast",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "4 slices of thick-cut bread",
+        "3 tablespoons unsalted butter, softened",
+        "3 tablespoons heavy cream",
+        "2 tablespoons honey",
+        "A pinch of salt"
+      ],
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc4356"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "In a small bowl, combine the softened butter, heavy cream, honey, and a pinch of salt. Whisk until the mixture is smooth and creamy.",
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc4357"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Generously spread the honey cream mixture evenly over one side of each slice of bread.",
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc4358"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Heat a non-stick skillet or pan over medium-low heat. Place the bread slices, spread-side down, onto the pan.",
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc4359"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Toast for 2-3 minutes, or until the bottom is golden brown and caramelized. Watch carefully as the honey can cause it to brown quickly.",
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc435a"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Flip the bread and toast the other side for 1-2 minutes until lightly golden.",
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc435b"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Remove from the pan and serve immediately while warm. You can add an extra drizzle of honey if desired.",
+      "_id": {
+        "$oid": "6929ad1bf0d962d071fc435c"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/8105106/pexels-photo-8105106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-11-28T14:09:31.545Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T17:20:30.754Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "692dc2d6b848b73166bc7687"
+  },
+  "dish_name": "Mutton and Vegetable Pulao",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "500g Mutton, cut into 1-inch pieces",
+        "1.5 cups Basmati Rice",
+        "1 large Onion, thinly sliced",
+        "2 medium Tomatoes, chopped",
+        "1 large Potato, peeled and cubed",
+        "1 medium Carrot, diced",
+        "1 cup Broccoli florets",
+        "1 cup shredded Cabbage",
+        "4-5 cloves Garlic, minced",
+        "2 tablespoons Olive Oil",
+        "1 tablespoon Butter"
+      ],
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7688"
+      }
+    },
+    {
+      "section": "Spices and Seasonings",
+      "items": [
+        "1 teaspoon Turmeric Powder",
+        "1 teaspoon Red Chili Powder",
+        "1/2 teaspoon Black Pepper, freshly ground",
+        "1 teaspoon Dried Oregano",
+        "1 tablespoon Soy Sauce",
+        "Salt to taste",
+        "3 cups Water or Mutton Broth"
+      ],
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7689"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Wash the Basmati rice thoroughly and soak it in water for 30 minutes. Drain before use.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc768a"
+      }
+    },
+    {
+      "step": 2,
+      "text": "In a bowl, marinate the mutton pieces with minced garlic, turmeric powder, red chili powder, black pepper, and salt. Set aside for at least 20 minutes.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc768b"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Heat olive oil and butter in a large heavy-bottomed pot or pressure cooker over medium-high heat. Add the sliced onions and sauté until they turn golden brown.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc768c"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Add the marinated mutton to the pot and sear on all sides until it is browned.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc768d"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Stir in the chopped tomatoes and cook until they become soft and mushy, releasing their oil.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc768e"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Add the cubed potatoes and diced carrots. Sauté for 3-4 minutes, mixing well with the mutton and spices.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc768f"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Pour in the soy sauce and sprinkle the oregano. Mix everything together.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7690"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Add 1 cup of water, bring to a boil, then cover and simmer (or pressure cook for 3-4 whistles) until the mutton is about 80% tender.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7691"
+      }
+    },
+    {
+      "step": 9,
+      "text": "Add the drained rice, broccoli florets, and shredded cabbage to the pot. Gently stir to combine without breaking the rice grains.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7692"
+      }
+    },
+    {
+      "step": 10,
+      "text": "Pour in the remaining 2 cups of water (or enough to cook the rice, usually a 1:1.5 rice to liquid ratio including existing gravy). Adjust salt if necessary.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7693"
+      }
+    },
+    {
+      "step": 11,
+      "text": "Bring the mixture to a boil, then reduce the heat to low, cover the pot with a tight-fitting lid, and let it cook for 15-20 minutes, or until the rice is cooked and all the liquid has been absorbed.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7694"
+      }
+    },
+    {
+      "step": 12,
+      "text": "Turn off the heat and let the pulao rest, covered, for 10 minutes. Fluff gently with a fork before serving hot.",
+      "_id": {
+        "$oid": "692dc2d6b848b73166bc7695"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/18698231/pexels-photo-18698231.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-12-01T16:31:18.429Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T16:31:18.429Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "692dc766b848b73166bc7826"
+  },
+  "dish_name": "Creamy Gajar ka Halwa (Carrot Pudding)",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "500g carrots, peeled and finely grated",
+        "2 cups full-fat milk",
+        "3 tablespoons butter",
+        "1/2 cup sugar (adjust to taste)",
+        "1/4 cup heavy cream",
+        "1/2 teaspoon cardamom powder"
+      ],
+      "_id": {
+        "$oid": "692dc766b848b73166bc7827"
+      }
+    },
+    {
+      "section": "For Garnish (Optional)",
+      "items": [
+        "2 tablespoons slivered almonds",
+        "2 tablespoons chopped pistachios"
+      ],
+      "_id": {
+        "$oid": "692dc766b848b73166bc7828"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "In a heavy-bottomed pan or kadai, melt the butter over medium heat. Add the grated carrots and sauté for 8-10 minutes, stirring frequently, until the carrots soften and the raw smell disappears.",
+      "_id": {
+        "$oid": "692dc766b848b73166bc7829"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Pour in the milk and bring the mixture to a boil. Once boiling, reduce the heat to low-medium and let it simmer. Stir occasionally to prevent sticking at the bottom.",
+      "_id": {
+        "$oid": "692dc766b848b73166bc782a"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Continue to cook until the milk is almost completely absorbed by the carrots. This process can take about 20-25 minutes.",
+      "_id": {
+        "$oid": "692dc766b848b73166bc782b"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Add the sugar and mix well. The sugar will melt and release moisture, making the mixture slightly liquid again. Continue to cook, stirring continuously, until the moisture evaporates and the halwa thickens.",
+      "_id": {
+        "$oid": "692dc766b848b73166bc782c"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Stir in the heavy cream and cardamom powder. Cook for another 3-5 minutes until the halwa comes together, becomes glossy, and starts to leave the sides of the pan.",
+      "_id": {
+        "$oid": "692dc766b848b73166bc782d"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Turn off the heat. Garnish with slivered almonds and pistachios. Serve the creamy Gajar ka Halwa warm.",
+      "_id": {
+        "$oid": "692dc766b848b73166bc782e"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/20446398/pexels-photo-20446398.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-12-01T16:50:46.906Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T16:50:46.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6933ed6281ef8abdac7f96db"
+  },
+  "dish_name": "Tomato Potato Pulao with Cucumber Salad",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "For the Pulao",
+      "items": [
+        "1 cup Basmati rice, rinsed and soaked for 20 minutes",
+        "2 medium potatoes, peeled and diced",
+        "2 large tomatoes, finely chopped",
+        "2 tablespoons olive oil",
+        "1 teaspoon salt, or to taste",
+        "1/2 teaspoon freshly ground black pepper",
+        "2 cups water"
+      ],
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96dc"
+      }
+    },
+    {
+      "section": "For the Cucumber Salad",
+      "items": [
+        "1 large cucumber, peeled and thinly sliced",
+        "1 tablespoon vinegar",
+        "1 teaspoon olive oil",
+        "A pinch of salt",
+        "A pinch of black pepper"
+      ],
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96dd"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Heat 2 tablespoons of olive oil in a medium-sized pot over medium heat. Add the diced potatoes and cook for 5-7 minutes until they are light golden brown.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96de"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Add the chopped tomatoes, salt, and black pepper to the pot. Sauté for 4-5 minutes until the tomatoes soften and become pulpy.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96df"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Drain the soaked rice and add it to the pot. Gently stir for one minute to coat the rice grains with the tomato-potato mixture.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96e0"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Pour in 2 cups of water and bring the mixture to a boil. Once boiling, reduce the heat to the lowest setting.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96e1"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Cover the pot with a tight-fitting lid and let it simmer for 15-20 minutes, or until all the water is absorbed and the rice is fully cooked.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96e2"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Turn off the heat and let the pulao rest, covered, for 5 minutes. This helps the grains to separate.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96e3"
+      }
+    },
+    {
+      "step": 7,
+      "text": "While the pulao is resting, prepare the salad. In a small bowl, combine the sliced cucumber, vinegar, 1 teaspoon olive oil, and a pinch of salt and pepper. Toss well.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96e4"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Fluff the pulao gently with a fork and serve hot with the refreshing cucumber salad on the side.",
+      "_id": {
+        "$oid": "6933ed6281ef8abdac7f96e5"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/29944219/pexels-photo-29944219.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-12-06T08:46:26.075Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T08:46:26.075Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69341d69d7dbbaf15a426e43"
+  },
+  "dish_name": "Shahi Malai Paneer",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "For the Homemade Paneer",
+      "items": [
+        "1 litre full-fat Milk",
+        "2 tablespoons Vinegar"
+      ],
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e44"
+      }
+    },
+    {
+      "section": "For the Shahi Gravy",
+      "items": [
+        "2 tablespoons Butter",
+        "1 tablespoon Olive Oil",
+        "1 cup full-fat Yogurt, whisked until smooth",
+        "1/2 cup heavy Cream",
+        "1/4 cup grated mild Cheese (like mozzarella or processed cheese)",
+        "1 tablespoon Honey",
+        "1 teaspoon Sugar",
+        "1/2 teaspoon cardamom powder",
+        "1/4 teaspoon white pepper powder",
+        "Salt to taste"
+      ],
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e45"
+      }
+    },
+    {
+      "section": "For Garnish",
+      "items": [
+        "1 tablespoon fresh Cream"
+      ],
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e46"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "To prepare the paneer, bring the milk to a rolling boil in a heavy-bottomed pot, stirring occasionally to prevent it from sticking to the bottom.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e47"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Once the milk is boiling, reduce the heat to low and gradually add the vinegar. Stir gently until the milk curdles completely and greenish whey separates from the milk solids.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e48"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Turn off the heat. Line a colander with a muslin or cheesecloth and pour the curdled milk through it to separate the solids (chenna) from the whey.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e49"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Rinse the chenna under cold water to remove any lingering taste of vinegar. Squeeze the cloth to remove excess water, then place it on a flat plate and press it with a heavy object for 1-2 hours to set. Once set, cut the paneer into cubes.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e4a"
+      }
+    },
+    {
+      "step": 5,
+      "text": "For the gravy, heat the butter and olive oil in a non-stick pan over low-medium heat.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e4b"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Ensure the heat is low, then slowly add the whisked yogurt. Stir continuously for 2-3 minutes to prevent it from splitting.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e4c"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Stir in the heavy cream, honey, sugar, salt, white pepper powder, and cardamom powder. Mix until well combined.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e4d"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Add the grated cheese and continue to stir on low heat until the cheese melts completely and the gravy becomes smooth and creamy.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e4e"
+      }
+    },
+    {
+      "step": 9,
+      "text": "Allow the gravy to simmer gently for 5-7 minutes, until it thickens slightly. Adjust seasoning if necessary.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e4f"
+      }
+    },
+    {
+      "step": 10,
+      "text": "Gently add the prepared paneer cubes to the gravy. Stir carefully to coat the paneer without breaking the cubes.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e50"
+      }
+    },
+    {
+      "step": 11,
+      "text": "Let the paneer simmer in the gravy for 2-3 minutes, allowing it to absorb the rich flavors.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e51"
+      }
+    },
+    {
+      "step": 12,
+      "text": "Turn off the heat, transfer to a serving bowl, and garnish with a swirl of fresh cream. Serve hot with naan bread or basmati rice.",
+      "_id": {
+        "$oid": "69341d69d7dbbaf15a426e52"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/10345736/pexels-photo-10345736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-12-06T12:11:21.190Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T12:11:21.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69369f25d255fa053769f4ca"
+  },
+  "dish_name": "Gajar ka Halwa (Carrot Halwa)",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "500g Carrots (grated)",
+        "1 cup Milk (full-fat recommended)",
+        "1/2 cup Sugar (adjust to taste)",
+        "4 tbsp Butter (or Ghee)",
+        "1/2 tsp Cardamom powder",
+        "1/4 cup Cashews or Almonds (chopped, optional)"
+      ],
+      "_id": {
+        "$oid": "69369f25d255fa053769f4cb"
+      }
+    },
+    {
+      "section": "Garnish",
+      "items": [
+        "2 tbsp Chopped nuts (cashews, almonds, pistachios)"
+      ],
+      "_id": {
+        "$oid": "69369f25d255fa053769f4cc"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Wash, peel, and grate the carrots. Set aside.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4cd"
+      }
+    },
+    {
+      "step": 2,
+      "text": "In a heavy-bottomed pan or kadai, melt the butter over medium heat.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4ce"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Add the grated carrots to the melted butter and sauté for 5-7 minutes until they soften slightly and lose their raw smell.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4cf"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Pour in the milk and bring it to a gentle boil. Reduce the heat to low-medium and let it simmer.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4d0"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Cook, stirring occasionally, until most of the milk has been absorbed by the carrots and evaporated (this can take 20-30 minutes).",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4d1"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Add the sugar and cardamom powder. Continue to cook, stirring frequently, until the sugar dissolves and the mixture thickens. The halwa will become glossy.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4d2"
+      }
+    },
+    {
+      "step": 7,
+      "text": "If using, add the chopped cashews or almonds during the last 5 minutes of cooking.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4d3"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Continue to cook until all the liquid has evaporated and the halwa starts to leave the sides of the pan. This indicates it's well cooked and has a rich texture.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4d4"
+      }
+    },
+    {
+      "step": 9,
+      "text": "Remove from heat. Garnish with additional chopped nuts before serving warm.",
+      "_id": {
+        "$oid": "69369f25d255fa053769f4d5"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/5453716/pexels-photo-5453716.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-12-08T09:49:25.472Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-08T09:49:25.472Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69369f66d255fa053769f4d7"
+  },
+  "dish_name": "Nariyal Aloo Tamatar Pulao (Coconut Potato Tomato Pulao)",
+  "RECIPE_INGREDIENTS": [
+    {
+      "section": "Main Ingredients",
+      "items": [
+        "1.5 cups Basmati Rice, washed and soaked for 20 minutes",
+        "2 medium Potatoes, peeled and diced",
+        "1 large Onion, finely chopped",
+        "2 medium Tomatoes, pureed or finely chopped",
+        "1 cup Coconut Milk",
+        "2 cups Water",
+        "2 tbsp Olive Oil",
+        "1 tsp Sugar",
+        "1 tbsp Butter",
+        "1/4 cup Cucumber, diced (for garnish/side)"
+      ],
+      "_id": {
+        "$oid": "69369f66d255fa053769f4d8"
+      }
+    },
+    {
+      "section": "Spices & Seasonings",
+      "items": [
+        "1 tsp Cumin Seeds",
+        "1/2 tsp Turmeric Powder",
+        "1 tsp Red Chili Powder (adjust to taste)",
+        "1 tsp Salt (or to taste)",
+        "1/2 tsp Black Pepper powder",
+        "1/2 tsp Dried Oregano",
+        "1/4 tsp Dried Thyme",
+        "1 tsp Soy Sauce (light)"
+      ],
+      "_id": {
+        "$oid": "69369f66d255fa053769f4d9"
+      }
+    }
+  ],
+  "COOKING_INSTRUCTIONS": [
+    {
+      "step": 1,
+      "text": "Heat olive oil in a heavy-bottomed pan or pressure cooker over medium heat. Add cumin seeds and let them splutter.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4da"
+      }
+    },
+    {
+      "step": 2,
+      "text": "Add chopped onions and sauté until translucent and light golden brown.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4db"
+      }
+    },
+    {
+      "step": 3,
+      "text": "Add pureed/chopped tomatoes, turmeric powder, red chili powder, salt, black pepper, and soy sauce. Cook for 5-7 minutes until the tomatoes soften and the oil starts to separate.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4dc"
+      }
+    },
+    {
+      "step": 4,
+      "text": "Add the diced potatoes and sugar. Mix well and cook for another 3-4 minutes.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4dd"
+      }
+    },
+    {
+      "step": 5,
+      "text": "Drain the soaked rice and add it to the pan. Gently mix with the vegetable and spice mixture for 1-2 minutes.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4de"
+      }
+    },
+    {
+      "step": 6,
+      "text": "Pour in the coconut milk and water. Bring the mixture to a boil.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4df"
+      }
+    },
+    {
+      "step": 7,
+      "text": "Reduce heat to low, cover the pan tightly, and cook for 15-20 minutes, or until all the liquid is absorbed and the rice is cooked. (If using a pressure cooker, cook for 1 whistle on medium heat and let the pressure release naturally).",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4e0"
+      }
+    },
+    {
+      "step": 8,
+      "text": "Once cooked, gently fluff the rice with a fork. Add butter, dried oregano, and dried thyme. Mix gently.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4e1"
+      }
+    },
+    {
+      "step": 9,
+      "text": "Garnish with diced cucumber and serve hot.",
+      "_id": {
+        "$oid": "69369f66d255fa053769f4e2"
+      }
+    }
+  ],
+  "recipe_img": "https://images.pexels.com/photos/1199956/pexels-photo-1199956.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  "createdBy": {
+    "$oid": "69281e539ae0dae2e5ee9b66"
+  },
+  "createdAt": {
+    "$date": "2025-12-08T09:50:30.684Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-08T09:50:30.684Z"
+  },
+  "__v": 0
+}]
