@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import useFoodStore from "@/Store/useFoodStore"
+import useFoodStore from "@/store/useFoodStore"
 import { Trash } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import { toast } from "react-toastify"

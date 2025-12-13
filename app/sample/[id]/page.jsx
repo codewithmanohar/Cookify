@@ -1,6 +1,6 @@
 'use client';
 import { useParams, useRouter } from 'next/navigation';
-import useFoodStore from '@/Store/useFoodStore';
+import useFoodStore from '@/store/useFoodStore';
 import { useEffect, useState } from 'react';
 import { ChefHat, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';

@@ -4,7 +4,7 @@ import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import { ChefHat, Heart, RotateCcw, ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
-import useFoodStore from "@/Store/useFoodStore"
+import useFoodStore from "@/store/useFoodStore"
 import { useEffect } from 'react'
 import Loading from '@/components/Loading'
 import { useSession } from 'next-auth/react'

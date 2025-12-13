@@ -2,7 +2,7 @@
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import useFoodStore from '@/Store/useFoodStore'
+import useFoodStore from '@/store/useFoodStore'
 import { useEffect } from 'react'
 import Link from 'next/link'
 import { DeleteDialog } from '@/components/delete-dialog'

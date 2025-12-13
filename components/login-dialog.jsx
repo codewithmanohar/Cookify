@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import useFoodStore from "@/Store/useFoodStore"
+import useFoodStore from "@/store/useFoodStore"
 import { Sparkle, Trash } from "lucide-react"
 import { signIn } from "next-auth/react"
 import { useParams } from "next/navigation"
