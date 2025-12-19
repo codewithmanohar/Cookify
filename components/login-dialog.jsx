@@ -24,7 +24,7 @@ export function LoginDialog({ id }) {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Button variant="primary" className="bg-primary hover:bg-green-600 text-gray-100 hover:text-gray-100" >
+          <Button variant="secondary" className="bg-primary hover:bg-pink-600 text-white"   >
             <Sparkle />
             <span>Generate Recipe</span>
           </Button>
@@ -38,7 +38,7 @@ export function LoginDialog({ id }) {
             <DialogClose asChild>
               <Button variant="outline">Cancel</Button>
             </DialogClose>
-            <Button onClick={() => signIn("google")} className="bg-green-500 hover:bg-green-600" type="submit">
+            <Button onClick={() => signIn("google")} className="bg-primary hover:bg-pink-600" type="submit">
               
               <span>Login with Google</span>
             </Button>
