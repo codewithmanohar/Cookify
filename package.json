@@ -20,6 +20,8 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "genai": "^0.0.18",
+    "html2canvas-pro": "^1.6.7",
+    "jspdf": "^4.1.0",
     "lucide-react": "^0.553.0",
     "mongoose": "^8.20.1",
     "next": "^16.0.10",
