@@ -1,6 +1,5 @@
 import { ChefHat } from 'lucide-react'
 import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { LuFacebook } from "react-icons/lu";
 import { RiYoutubeLine } from "react-icons/ri";
@@ -28,9 +27,6 @@ export const Footer = () => {
         <div className="md:mx-auto">
           <h1 className="font-bold text-xl pb-3">Quick Links</h1>
           <div className="flex flex-col gap-2 text-sm">
-            <Link href="/recipes">Recipes</Link>
-            <Link href="/profile">Profile</Link>
-            <Link href="/about">About</Link>
             <Link href="/privacy_policy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
           </div>
@@ -50,9 +46,9 @@ export const Footer = () => {
       </div>
 
       {/* Bottom Text */}
-      <div className="py-5 border-t">
+      <div className="py-10 border-t">
         <h3 className="text-center text-xs text-gray-500">
-          © 2025 Cookify. All rights reserved.
+          © 2026 Cookify. All rights reserved.
         </h3>
       </div>
 

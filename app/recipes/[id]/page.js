@@ -262,15 +262,15 @@ export default function PostPage() {
             <h1 className='text-primary text-3xl sm:text-4xl md:text-5xl font-semibold py-3 sm:py-5'>
               {recipeById.dish_name}
             </h1>
-            <p className='text-gray-500 text-xs sm:text-sm max-w-xl sm:max-w-2xl leading-relaxed'>
+            {/* <p className='text-gray-500 text-xs sm:text-sm max-w-xl sm:max-w-2xl leading-relaxed'>
               A rich, creamy, and mildly spiced Indian curry, perfect for a cozy dinner.
-            </p>
+            </p> */}
           </section>
 
           {/* Image Section */}
           <section className="my-4 sm:my-6">
             {recipeById.recipe_img ? (
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
+              <div className="relative mx-auto w-[90%] h-[250px] sm:h-[350px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src={recipeById.recipe_img}
                   alt={recipeById.dish_name || "Dish image"}
@@ -287,7 +287,7 @@ export default function PostPage() {
           </section>
 
           {/* Ingredients */}
-          <section className='my-8 sm:my-10 px-4 sm:px-10 py-5 bg-gray-50 rounded-xl shadow-inner'>
+          <section className='my-8 sm:my-10 px-4 sm:px-10 py-5  '>
             <h1 className='text-xl sm:text-2xl pb-3 sm:pb-5 font-bold flex gap-2 items-center'>
               Ingredients <ShoppingCart className='w-5 h-5 sm:w-6 sm:h-6' />
             </h1>
@@ -309,7 +309,7 @@ export default function PostPage() {
           </section>
 
           {/* Cooking Instructions */}
-          <section className='py-8 sm:py-10'>
+          <section className='py-8 sm:py-10 px-4 sm:px-10'>
             <h1 className='text-xl sm:text-2xl py-3 sm:py-5 font-bold flex gap-2 items-center'>
               Cooking Instructions <ChefHat className='w-5 h-5 sm:w-6 sm:h-6' />
             </h1>
@@ -317,7 +317,7 @@ export default function PostPage() {
             {recipeById.COOKING_INSTRUCTIONS?.map((item, index) => (
               <div
                 key={index}
-                className='flex gap-4 sm:gap-5 mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow'>
+                className='flex gap-4 sm:gap-5 mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-amber-5 shadow-sm hover:shadow-md transition-shadow'>
                 <span className='font-bold text-base sm:text-lg text-primary min-w-[25px] sm:min-w-[30px] text-center'>
                   {item.step}.
                 </span>
