@@ -27,10 +27,14 @@ export default function Landing() {
         {/* HERO TEXT */}
         <div className="relative z-20 flex items-center justify-center h-full px-4">
           <div className="flex flex-col gap-4 sm:gap-5 items-center text-gray-100 text-center max-w-3xl">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
+            <h1 
+               style={{ color: "#FFF8F0", textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}
+              className="text-3xl sm:text-5xl md:text-6xl font-bold ">
               Your AI Chef for Instant Recipes
             </h1>
-            <h2 className="text-sm sm:text-xl md:text-2xl font-semibold max-w-xl">
+            <h2 
+               style={{ color: "#FEF3E2", textShadow: "0 1px 12px rgba(0,0,0,0.6)" }}
+              className="text-sm sm:text-xl md:text-2xl font-semibold max-w-xl text">
               Select ingredients → AI creates delicious recipes instantly.
             </h2>
 
