@@ -65,8 +65,8 @@ export const  Header = () => {
                 <Link 
                   href="/login" 
                   className="text-md"
-                  onClick={() => signIn("google")}
-                >
+                  // onClick={() => signIn("google")}
+                > 
                   <span>Sign</span>
                 </Link>
               </NavigationMenuItem>

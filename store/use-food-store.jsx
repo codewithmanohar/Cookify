@@ -1,24 +1,22 @@
-// /Store/useIngredientsStore.js
 import { api } from "@/lib/axiosInstance";
-import axios from "axios";
 import { create } from "zustand";
 
 const useFoodStore = create((set) => ({
   food_type: "",
   food_ingridient: [],
 
-  // API states 
+  // API states
   recipe: null,
   loading: false,
   error: null,
 
-  // Recipe states 
+  // Recipe states
   recipes: null,
   recipesLoading: false,
   totalPages: 1,
   currentPage: 1,
 
-  // Recipe by Id 
+  // Recipe by Id
   recipeById: null,
 
   setFoodType: (newType) => set({ food_type: newType }),
@@ -35,95 +33,119 @@ const useFoodStore = create((set) => ({
       food_ingridient: state.food_ingridient.filter((i) => i !== item),
     })),
 
-  // Generate Recipe (API Request)
+  // Generate Recipe
   getRecipe: async (userId) => {
-    set({ loading: true, error: null });
     try {
-      const res = await fetch("http://localhost:3000/api/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          food_type: useFoodStore.getState().food_type,
-          selectedIngredients: useFoodStore.getState().food_ingridient,
-          userId: userId
-        }),
+      set({
+        loading: true,
+        error: null,
       });
 
-      if (!res.ok) {
-        throw new Error("Failed to generate recipe");
-      }
-
-      const data = await res.json();
+      const res = await api.post("/api/generate", {
+        food_type: useFoodStore.getState().food_type,
+        selectedIngredients: useFoodStore.getState().food_ingridient,
+        userId,
+      });
 
       set({
-        recipe: data,
+        recipe: res.data,
         loading: false,
-      })
+      });
+
+      return res.data;
     } catch (error) {
       set({
-        error: error.message,
         loading: false,
-      })
+        error:
+          error.response?.data?.message ||
+          error.message ||
+          "Something went wrong",
+      });
+
+      console.log(error);
+
+      return null;
     }
   },
 
-  // Clear generated recipe 
+  // Clear generated recipe
   clearRecipe: () => set({ recipe: null }),
 
+  // Get all recipes
   getAllRecipes: async (id, page = 1) => {
-  try {
-    set({ recipesLoading: true });
+    try {
+      set({ recipesLoading: true });
 
-    const res = await axios.get(
-      `http://localhost:3000/api/recipes/user/${id}?page=${page}`
-    );
+      const res = await api.get(
+        `/api/recipes/user/${id}?page=${page}`
+      );
 
-    set({
-      recipes: res.data.recipes,
-      totalPages: res.data.totalPages,
-      currentPage: res.data.currentPage,
-      recipesLoading: false,
-    });
-  } catch (error) {
-    set({ recipesLoading: false });
-    console.log("Error fetching all recipes:", error.message);
-    return null;
-  }
-},
+      set({
+        recipes: res.data.recipes,
+        totalPages: res.data.totalPages,
+        currentPage: res.data.currentPage,
+        recipesLoading: false,
+      });
 
+      return res.data;
+    } catch (error) {
+      set({ recipesLoading: false });
 
+      console.log(
+        "Error fetching all recipes:",
+        error.response?.data || error.message
+      );
+
+      return null;
+    }
+  },
+
+  // Get recipe by id
   getRecipeById: async (id) => {
     try {
       set({ recipesLoading: true });
-      const res = await axios.get(`http://localhost:3000/api/recipes/${id}`);
+
+      const res = await api.get(`/api/recipes/${id}`);
+
       set({
         recipeById: res.data,
-        recipesLoading: false
-      })
+        recipesLoading: false,
+      });
+
+      return res.data;
     } catch (error) {
       set({ recipesLoading: false });
-      console.log("Error in fetching recipeById");
-      return Response.json(error.message);
+
+      console.log(
+        "Error fetching recipeById:",
+        error.response?.data || error.message
+      );
+
+      return null;
     }
   },
 
+  // Remove recipe
   removeRecipe: async (id) => {
     try {
       set({ isDeleting: true });
-      const res = await api.delete(`api/recipes/${id}`);
 
-      if (res) {
-        set({ isDeleting: false });
-        return res;
-      }
+      const res = await api.delete(`/api/recipes/${id}`);
+
+      set({ isDeleting: false });
+
+      return res.data;
     } catch (error) {
       set({ isDeleting: false });
-      console.log(error.message);
-      return null
+
+      console.log(
+        "Error deleting recipe:",
+        error.response?.data || error.message
+      );
+
+      return null;
     }
-  }
+  },
 }));
 
 export default useFoodStore;

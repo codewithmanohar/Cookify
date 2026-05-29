@@ -29,7 +29,7 @@ const page = () => {
                 >
                     <div className="flex gap-6 items-center text-start">
                         <Image
-                            alt="profile_img"
+                            alt={session?.user?.name || "profile_name"}
                             width={90}
                             height={90}
                             src={session?.user?.image || PROFILE_INFO.profile_img}
