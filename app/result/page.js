@@ -23,7 +23,7 @@ const page = () => {
 
 
   if (loading) {
-    return <Loading message="Recipes Generating..."/>
+    return <Loading message="Recipes Generating..." />
   }
 
   return (
@@ -74,17 +74,22 @@ const page = () => {
 
         <section className='py-10'>
           <h1 className='text-2xl py-10 font-bold flex gap-2 items-center'>
-            Cooking Instructions <ShoppingCart />
+            Cooking Instructions <ChefHat />
           </h1>
 
-          {recipe.recipe_data.COOKING_INSTRUCTIONS.map((item, index) => (
-            <div
-              key={index}
-              className='flex gap-5'>
-              <span className='font-bold '>{item.step}.</span>
-              <span>{item.text}</span>
-            </div>
-          ))}
+          <div className='flex flex-col gap-4'>
+            {recipe.recipe_data.COOKING_INSTRUCTIONS.map((item, index) => (
+              <div
+                key={index}
+                className='flex gap-4 p-5 rounded-xl border border-primary/10 bg-primary/5 hover:bg-primary/10 transition-colors'
+              >
+                <span className='flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm'>
+                  {item.step}
+                </span>
+                <p className='text-gray-700 leading-relaxed pt-1'>{item.text}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className='flex gap-5 items-center justify-center my-10' >
