@@ -62,8 +62,6 @@ const useFoodStore = create((set) => ({
           "Something went wrong",
       });
 
-      console.log(error);
-
       return null;
     }
   },
@@ -125,7 +123,7 @@ const useFoodStore = create((set) => ({
     }
   },
 
-  // Remove recipe
+  // delete recipe
   removeRecipe: async (id) => {
     try {
       set({ isDeleting: true });

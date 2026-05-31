@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import useIngredientsStore from "@/store/use-food-store";
 import { Search, Sparkles } from "lucide-react";
-import { INGREDIENTS } from "@/lib/data";
+import { INGREDIENTS, MEAL_CATEGORIES } from "@/lib/data";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -19,7 +19,6 @@ export default function Counter() {
   } = useIngredientsStore();
 
   const router = useRouter();
-
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -37,27 +36,26 @@ export default function Counter() {
     }
   };
 
-  // Filter ingredients based on search
-  const filteredIngredients = INGREDIENTS.flatMap((category) =>
-    category.items.filter((item) => {
-      const matchesSearch = item.name
-        .toLowerCase()
-        .includes(search.toLowerCase());
+  // Get sub-category names for the selected meal (e.g. ["Vegetables", "Dairy & Eggs", ...])
+  const subCategoryNames = MEAL_CATEGORIES[food_type] ?? [];
 
-      const matchesFoodType =
-        food_type === "non-veg" ||
-        (food_type === "veg" &&
-          (item.tag === "veg" || item.tag === "vegan")) ||
-        (food_type === "vegan" && item.tag === "vegan");
+  // Get the full sub-category objects from INGREDIENTS matching the meal's sub-categories
+  const mealSubCategories = subCategoryNames
+    .map((name) => INGREDIENTS.find((cat) => cat.category === name))
+    .filter(Boolean);
 
-      return matchesSearch && matchesFoodType;
-    })
+  // Search: search across all items in the meal's sub-categories
+  const filteredIngredients = mealSubCategories.flatMap((cat) =>
+    cat.items.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    )
   );
 
   return (
     <>
       <div className="container mx-auto my-14">
         <div className="mx-auto max-w-5xl">
+
           {/* Heading */}
           <h1 className="text-center py-10 text-4xl font-semibold">
             What ingredients do you have?
@@ -67,7 +65,6 @@ export default function Counter() {
           <form className="mx-auto max-w-2xl mt-10">
             <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.5rem)] border pr-2 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
               <Search className="pointer-events-none absolute inset-y-0 left-4 my-auto size-4" />
-
               <input
                 placeholder="Search for Ingredient"
                 className="h-12 w-full bg-transparent pl-12 focus:outline-none"
@@ -105,46 +102,34 @@ export default function Counter() {
             </div>
           )}
 
-          {/* Ingredients Categories */}
+          {/* Ingredients grouped by sub-category */}
           {!search && (
             <section className="mx-auto max-w-2xl">
-              {INGREDIENTS.map((Ingredient, index) =>
-                food_type == "non-veg" ||
-                (food_type == "veg" &&
-                  (Ingredient.categoryTag == "veg" ||
-                    Ingredient.categoryTag == "vegan")) ||
-                (food_type == "vegan" &&
-                  Ingredient.categoryTag == "vegan") ? (
-                  <div key={index}>
-                    <h1 className="text-xl text-center font-semibold tracking-tight py-10">
-                      {Ingredient.category}
-                    </h1>
+              {mealSubCategories.map((cat, catIndex) => (
+                <div key={catIndex}>
+                  {/* Sub-category heading */}
+                  <h2 className="text-xl text-center font-semibold tracking-tight py-10">
+                    {cat.category}
+                  </h2>
 
-                    <div className="flex flex-row gap-10 items-center justify-center flex-wrap">
-                      {Ingredient.items.map((item, index) =>
-                        food_type === "non-veg" ||
-                        (food_type === "veg" &&
-                          (item.tag === "veg" ||
-                            item.tag === "vegan")) ||
-                        (food_type === "vegan" &&
-                          item.tag === "vegan") ? (
-                          <Button
-                            key={index}
-                            variant={
-                              food_ingridient.includes(item.name)
-                                ? "destructive"
-                                : "outline"
-                            }
-                            onClick={() => toggleOption(item.name)}
-                          >
-                            {item.name} {item.icon}
-                          </Button>
-                        ) : null
-                      )}
-                    </div>
+                  {/* Items */}
+                  <div className="flex flex-row gap-4 items-center justify-center flex-wrap">
+                    {cat.items.map((item, itemIndex) => (
+                      <Button
+                        key={itemIndex}
+                        variant={
+                          food_ingridient.includes(item.name)
+                            ? "destructive"
+                            : "outline"
+                        }
+                        onClick={() => toggleOption(item.name)}
+                      >
+                        {item.name} {item.icon}
+                      </Button>
+                    ))}
                   </div>
-                ) : null
-              )}
+                </div>
+              ))}
             </section>
           )}
 
