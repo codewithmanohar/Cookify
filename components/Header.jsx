@@ -35,6 +35,11 @@ export const  Header = () => {
                   <span>My Recipes</span>
                 </Link>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/sample_recipes" className="text-md">
+                  <span>Sample Recipes</span>
+                </Link>
+              </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <Link href="/about" className="text-md">

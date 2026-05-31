@@ -13,7 +13,7 @@ const DemoRecipes = () => {
 
             <div className="min-h-[400px] flex flex-col items-center justify-center text-center px-4">
                 <h1 className='text-primary text-4xl sm:text-5xl font-semibold py-5 '>
-                    Sample Recipes Flavors 🍛
+                    Sample Recipes  🍛
                 </h1>
                 <p className=' text-gray-500 text-sm text-wrap max-w-2xl  '>
                     Rediscover your culinary journey with your hand-picked collection of delightful recipes.
@@ -47,7 +47,7 @@ const DemoRecipes = () => {
 
                             <CardFooter className="px-5 pb-5 mt-auto">
                                 <Button className="w-full">
-                                    <Link href={`/sample/${card._id}`}>View Recipe</Link>
+                                    <Link href={`/sample_recipes/${card._id}`}>View Recipe</Link>
                                 </Button>
                             </CardFooter>
                         </Card>
