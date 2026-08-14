@@ -8,7 +8,7 @@ export default function Landing() {
     <div className="relative w-full">
 
       {/* ================= HERO SECTION ================= */}
-      <div className="relative mt-16 w-full min-h-[60vh] sm:min-h-[75vh] pt-10 sm:pt-20 overflow-hidden">
+      <div className="relative w-full min-h-[80vh] pt-24 sm:pt-28 overflow-hidden">
 
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
