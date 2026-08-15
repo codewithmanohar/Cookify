@@ -2,7 +2,7 @@
 import { useParams, useRouter } from 'next/navigation';
 import useFoodStore from '@/store/use-food-store';
 import { useEffect, useState } from 'react';
-import { ChefHat, ShoppingCart } from 'lucide-react';
+import { ChefHat, ShoppingCart, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
@@ -22,6 +22,83 @@ export default function PostPage() {
     setRecipeData(data);
   }, [postId]);
 
+  const downloadPDF = () => {
+    if (!recipeData) return;
+    import("jspdf").then(({ default: jsPDF }) => {
+      const pdf = new jsPDF("p", "mm", "a4");
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const margin = 15;
+      const maxWidth = pageWidth - margin * 2;
+      let y = 20;
+
+      const checkNewPage = (extraHeight = 10) => {
+        if (y + extraHeight > pageHeight - 15) {
+          pdf.addPage();
+          y = 20;
+        }
+      };
+
+      pdf.setFont("helvetica", "bold");
+      pdf.setFontSize(20);
+      pdf.text(recipeData.dish_name, pageWidth / 2, y, { align: "center" });
+      y += 12;
+
+      checkNewPage();
+      pdf.setFontSize(14);
+      pdf.text("Ingredients", margin, y);
+      y += 2;
+      pdf.line(margin, y, pageWidth - margin, y);
+      y += 6;
+
+      recipeData.RECIPE_INGREDIENTS?.forEach((ingredient) => {
+        checkNewPage();
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(11);
+        pdf.text(ingredient.section, margin, y);
+        y += 6;
+
+        ingredient.items.forEach((item) => {
+          checkNewPage();
+          pdf.setFont("helvetica", "normal");
+          pdf.setFontSize(10);
+          pdf.text(`• ${item}`, margin + 4, y);
+          y += 5;
+        });
+
+        y += 3;
+      });
+
+      y += 4;
+      checkNewPage();
+      pdf.setFont("helvetica", "bold");
+      pdf.setFontSize(14);
+      pdf.text("Cooking Instructions", margin, y);
+      y += 2;
+      pdf.line(margin, y, pageWidth - margin, y);
+      y += 6;
+
+      recipeData.COOKING_INSTRUCTIONS?.forEach((item) => {
+        checkNewPage(15);
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(10);
+        pdf.text(`Step ${item.step}.`, margin, y);
+        y += 5;
+
+        pdf.setFont("helvetica", "normal");
+        const lines = pdf.splitTextToSize(item.text, maxWidth);
+        lines.forEach((line) => {
+          checkNewPage();
+          pdf.text(line, margin + 4, y);
+          y += 5;
+        });
+
+        y += 4;
+      });
+
+      pdf.save(`${recipeData.dish_name || "recipe"}.pdf`);
+    });
+  };
 
   if (!recipeData) {
     return (
@@ -41,7 +118,7 @@ export default function PostPage() {
       <div className='mx-auto container max-w-5xl my-10 sm:my-14'>
 
         {/* Header */}
-        <section className='text-center py-8 sm:py-10 flex flex-col items-center'>
+        <section className='text-center py-8 sm:py-10 flex flex-col items-center relative'>
           <h1 className='text-primary text-3xl sm:text-4xl md:text-5xl font-semibold py-3 sm:py-5'>
             {recipeData?.dish_name}
           </h1>
@@ -107,6 +184,14 @@ export default function PostPage() {
               <span className='text-gray-700 text-sm sm:text-base leading-relaxed'>{item.text}</span>
             </div>
           ))}
+        </section>
+
+        {/* Download Section */}
+        <section className='flex justify-center my-8 sm:my-10'>
+          <Button onClick={downloadPDF} className="gap-2 shadow-md hover:shadow-lg transition-all px-8 py-6 rounded-full" size="lg">
+            <Download className="w-6 h-6" />
+            <span className='font-semibold text-base'>Download Recipe PDF</span>
+          </Button>
         </section>
 
         {/* Footer */}

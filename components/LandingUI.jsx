@@ -3,6 +3,7 @@ import { useState } from "react";
 import { features, imgs, recipe } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
+import { Download } from "lucide-react";
 import { LoginDialog } from "./login-dialog";
 import { Footer } from "./Footer";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,84 @@ export default function Landing() {
 
   const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+
+  const downloadPDF = (cardData) => {
+    import("jspdf").then(({ default: jsPDF }) => {
+      const pdf = new jsPDF("p", "mm", "a4");
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const margin = 15;
+      const maxWidth = pageWidth - margin * 2;
+      let y = 20;
+
+      const checkNewPage = (extraHeight = 10) => {
+        if (y + extraHeight > pageHeight - 15) {
+          pdf.addPage();
+          y = 20;
+        }
+      };
+
+      pdf.setFont("helvetica", "bold");
+      pdf.setFontSize(20);
+      pdf.text(cardData.dish_name, pageWidth / 2, y, { align: "center" });
+      y += 12;
+
+      checkNewPage();
+      pdf.setFontSize(14);
+      pdf.text("Ingredients", margin, y);
+      y += 2;
+      pdf.line(margin, y, pageWidth - margin, y);
+      y += 6;
+
+      cardData.RECIPE_INGREDIENTS?.forEach((ingredient) => {
+        checkNewPage();
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(11);
+        pdf.text(ingredient.section, margin, y);
+        y += 6;
+
+        ingredient.items.forEach((item) => {
+          checkNewPage();
+          pdf.setFont("helvetica", "normal");
+          pdf.setFontSize(10);
+          pdf.text(`• ${item}`, margin + 4, y);
+          y += 5;
+        });
+
+        y += 3;
+      });
+
+      y += 4;
+      checkNewPage();
+      pdf.setFont("helvetica", "bold");
+      pdf.setFontSize(14);
+      pdf.text("Cooking Instructions", margin, y);
+      y += 2;
+      pdf.line(margin, y, pageWidth - margin, y);
+      y += 6;
+
+      cardData.COOKING_INSTRUCTIONS?.forEach((item) => {
+        checkNewPage(15);
+        pdf.setFont("helvetica", "bold");
+        pdf.setFontSize(10);
+        pdf.text(`Step ${item.step}.`, margin, y);
+        y += 5;
+
+        pdf.setFont("helvetica", "normal");
+        const lines = pdf.splitTextToSize(item.text, maxWidth);
+        lines.forEach((line) => {
+          checkNewPage();
+          pdf.text(line, margin + 4, y);
+          y += 5;
+        });
+
+        y += 4;
+      });
+
+      pdf.save(`${cardData.dish_name || "recipe"}.pdf`);
+    });
+  };
+
   return (
     <div className="relative w-full">
 
@@ -66,13 +145,13 @@ export default function Landing() {
         
         {recipe && recipe.length > 0 && (
           <div className="w-full max-w-7xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5 place-items-center">
+            <div className="flex flex-wrap justify-center gap-8 py-5">
               {currentRecipes.map((card, index) => (
                 <Card
                   key={index}
-                  className="rounded-xl overflow-hidden p-2 flex flex-col h-full shadow-sm bg-white w-full max-w-sm"
+                  className="rounded-xl overflow-hidden p-2 flex flex-col h-[320px] shadow-sm bg-white w-full max-w-[280px]"
                 >
-                  <div className="w-full h-40 relative">
+                  <div className="w-full h-36 relative flex-shrink-0">
                     <Image
                       src={card.recipe_img}
                       alt="image"
@@ -80,14 +159,17 @@ export default function Landing() {
                       className="object-cover rounded-xl"
                     />
                   </div>
-                  <CardHeader className="p-3 flex-grow flex items-center justify-center text-center">
-                    <CardTitle className="text-base font-bold">
+                  <CardHeader className="p-3 flex-grow flex items-center justify-center text-center overflow-hidden">
+                    <CardTitle className="text-base font-bold line-clamp-2">
                       {card.dish_name}
                     </CardTitle>
                   </CardHeader>
-                  <CardFooter className="px-3 pb-3 mt-auto">
+                  <CardFooter className="px-3 pb-3 mt-auto flex gap-2">
                     <Button className="w-full text-sm">
                       <Link href={`/sample_recipes/${card._id}`} className="w-full">View Recipe</Link>
+                    </Button>
+                    <Button onClick={() => downloadPDF(card)} size="icon" variant="outline" title="Download Recipe">
+                      <Download className="w-4 h-4" />
                     </Button>
                   </CardFooter>
                 </Card>
