@@ -1,9 +1,24 @@
-import { features, imgs } from "@/lib/data";
+"use client"
+import { useState } from "react";
+import { features, imgs, recipe } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 import { LoginDialog } from "./login-dialog";
 import { Footer } from "./Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Landing() {
+  const recipesPerPage = 3;
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(recipe.length / recipesPerPage);
+  
+  const indexOfLastRecipe = currentPage * recipesPerPage;
+  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+  const currentRecipes = recipe.slice(indexOfFirstRecipe, indexOfLastRecipe);
+
+  const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
   return (
     <div className="relative w-full">
 
@@ -42,6 +57,68 @@ export default function Landing() {
           </div>
         </div>
       </div>
+
+      {/* ================= SAMPLE RECIPES SECTION ================= */}
+      <section className="flex flex-col items-center justify-center gap-8 my-10 mt-10 px-4 py-10 w-full rounded-2xl">
+        <h1 className="text-2xl sm:text-4xl font-bold text-black text-center">
+          Explore Sample Recipes
+        </h1>
+        
+        {recipe && recipe.length > 0 && (
+          <div className="w-full max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5 place-items-center">
+              {currentRecipes.map((card, index) => (
+                <Card
+                  key={index}
+                  className="rounded-xl overflow-hidden p-2 flex flex-col h-full shadow-sm bg-white w-full max-w-sm"
+                >
+                  <div className="w-full h-40 relative">
+                    <Image
+                      src={card.recipe_img}
+                      alt="image"
+                      fill
+                      className="object-cover rounded-xl"
+                    />
+                  </div>
+                  <CardHeader className="p-3 flex-grow flex items-center justify-center text-center">
+                    <CardTitle className="text-base font-bold">
+                      {card.dish_name}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardFooter className="px-3 pb-3 mt-auto">
+                    <Button className="w-full text-sm">
+                      <Link href={`/sample_recipes/${card._id}`} className="w-full">View Recipe</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+            
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-4 mt-8">
+                <Button 
+                  onClick={prevPage} 
+                  disabled={currentPage === 1}
+                  variant="outline"
+                >
+                  Previous
+                </Button>
+                <span className="text-sm font-medium text-gray-600">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <Button 
+                  onClick={nextPage} 
+                  disabled={currentPage === totalPages}
+                  variant="outline"
+                >
+                  Next
+                </Button>
+              </div>
+            )}
+          </div>
+        )}
+      </section>
 
       {/* ================= FEATURES SECTION ================= */}
       <section className="flex flex-col items-center justify-center gap-8 my-10 mt-24 px-4">
